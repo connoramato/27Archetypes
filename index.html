@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetype Personality Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Collapse sidebar" title="Collapse sidebar" > ‹ </button>
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    ✦
+                </div>
+
+                <div>
+                    <h1>Archetypes</h1>
+                    <span>Personality Test</span>
+                </div>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-item active"
+                    data-tab="begin"
+                >
+                    <span class="nav-icon">◈</span>
+                    <span>Begin Test</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-tab="archetypes"
+                >
+                    <span class="nav-icon">◇</span>
+                    <span>Archetypes</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-tab="methodology"
+                >
+                    <span class="nav-icon">☷</span>
+                    <span>Methodology</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="theme-toggle">
+
+                    <span class="theme-label">
+                        <span id="themeIcon">☀</span>
+                        <span id="themeText">Light</span>
+                    </span>
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="themeToggle"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- =========================
+                BEGIN TAB
+            ========================== -->
+            <section id="beginTab" class="tab-content active">
+                <section id="startScreen" class="screen active">
+
+                    <div class="start-card">
+
+                        <div class="logo-mark">✦</div>
+
+                        <h1>Discover Your Archetype</h1>
+
+                        <p class="subtitle">
+                            Answer a series of questions about yourself,
+                            your values, and the way you approach the world.
+                            Your answers will reveal your unique archetype.
+                        </p>
+
+                        <div class="category-preview">
+
+                            <div class="category">
+                                <span class="category-icon">♥</span>
+                                <h3>Relationships</h3>
+                                <p>Lover · Soldier · Hero</p>
+                            </div>
+
+                            <div class="category">
+                                <span class="category-icon">✦</span>
+                                <h3>Ideals</h3>
+                                <p>Pragmatist · Romantic · Altruist</p>
+                            </div>
+
+                            <div class="category">
+                                <span class="category-icon">◈</span>
+                                <h3>Behaviors</h3>
+                                <p>Explorer · Wayfarer · Dreamer</p>
+                            </div>
+
+                        </div>
+
+                        <button id="startButton" class="primary-button">
+                            Begin Test<span>→</span>
+                        </button>
+
+                        <p class="small-note">
+                            Choose your path.
+                        </p>
+
+                    </div>
+
+                </section>
+            
+                <!-- =========================
+                    TEST SCREEN
+                ========================== -->
+                <section id="testScreen" class="screen">
+
+                    <header class="test-header">
+
+                        <div class="progress-info">
+                            <span id="questionCounter">Question 1</span>
+                            <span id="progressPercent">0%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div id="progressBar" class="progress-bar"></div>
+                        </div>
+
+                    </header>
+
+
+                    <main class="question-container">
+
+                        <div id="questionCard" class="question-card">
+
+                            <!-- Optional question image -->
+                            <div id="questionImageContainer" class="question-image-container">
+                                <img id="questionImage" src="" alt="">
+                            </div>
+
+                            <div id="questionCategory" class="question-category"></div>
+
+                            <h2 id="questionText"></h2>
+
+                            <p id="questionInstruction" class="question-instruction">
+                                Choose the answer that best describes you.
+                            </p>
+
+                            <div id="answersContainer" class="answers-container">
+                                <!-- Answers generated by JavaScript -->
+                            </div>
+
+                            <div class="question-navigation">
+                                <button
+                                    id="backButton"
+                                    class="back-button"
+                                    type="button"
+                                >
+                                    ← Back
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </main>
+
+                </section>
+
+
+                <!-- =========================
+                    RESULTS SCREEN
+                ========================== -->
+                <section id="resultsScreen" class="screen">
+
+                    <div class="results-container">
+
+                        <div class="results-header">
+
+                            <p class="results-eyebrow">
+                                YOUR ARCHETYPE
+                            </p>
+
+                            <div id="archetypeCode" class="archetype-code">
+                                LPD
+                            </div>
+
+                            <h1 id="archetypeName">
+                                The Explorer
+                            </h1>
+
+                            <p id="archetypeDescription" class="archetype-description">
+                            </p>
+
+                        </div>
+
+
+                        <!-- Archetype image -->
+                        <div class="archetype-image-wrapper">
+
+                            <img
+                                id="archetypeImage"
+                                src=""
+                                alt="Your archetype"
+                            >
+
+                        </div>
+
+
+                        <!-- Primary Archetype Scores -->
+                        <section class="results-section">
+
+                            <h2>Your Three Dimensions</h2>
+
+                            <p class="section-description">
+                                Your archetype is determined by your strongest
+                                dimension in each category.
+                            </p>
+
+                            <div class="dimension-grid">
+
+                                <div class="dimension-card">
+                                    <span class="dimension-label">
+                                        Relationships
+                                    </span>
+
+                                    <strong id="relationshipResult"></strong>
+
+                                    <div id="relationshipBars"></div>
+                                </div>
+
+
+                                <div class="dimension-card">
+                                    <span class="dimension-label">
+                                        Ideals
+                                    </span>
+
+                                    <strong id="idealResult"></strong>
+
+                                    <div id="idealBars"></div>
+                                </div>
+
+
+                                <div class="dimension-card">
+                                    <span class="dimension-label">
+                                        Behaviors
+                                    </span>
+
+                                    <strong id="behaviorResult"></strong>
+
+                                    <div id="behaviorBars"></div>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Other Traits -->
+                        <section class="results-section">
+
+                            <h2>Your Traits</h2>
+
+                            <p class="section-description">
+                                These traits describe additional aspects of your personality
+                                and are measured independently from your archetype.
+                            </p>
+
+                            <div id="traitCharts" class="trait-charts">
+                                <!-- Generated by JavaScript -->
+                            </div>
+
+                        </section>
+
+
+                        <section class="results-section">
+
+                            <h2>Complete Score Breakdown</h2>
+
+                            <div id="allScores" class="all-scores">
+                                <!-- Generated by JavaScript -->
+                            </div>
+
+                        </section>
+
+
+                        <button
+                            id="restartButton"
+                            class="primary-button"
+                        >
+                            Take the Test Again
+                        </button>
+
+                        <button
+                            id="saveResultsButton"
+                            class="primary-button"
+                            type="button"
+                        >
+                            Save Results
+                        </button>
+
+                    </div>
+
+                </section>
+            
+            </section>
+
+
+
+            <!-- =====================
+                 ARCHETYPES TAB
+            ====================== -->
+
+            <section id="archetypesTab" class="tab-content">
+
+                <div class="page-container">
+
+                    <div class="page-header">
+
+                        <div class="welcome-eyebrow">
+                            THE 27 ARCHETYPES
+                        </div>
+
+                        <h2>
+                            Three dimensions.<br>
+                            Twenty-seven possibilities.
+                        </h2>
+
+                        <p>
+                            Your archetype is formed from three dimensions:
+                            how you relate to others, the ideals that guide
+                            you, and how you tend to move through the world.
+                        </p>
+
+                    </div>
+
+
+                    <div class="archetype-accordion">
+
+                        <!-- RELATIONSHIPS -->
+
+                        <div class="dimension">
+
+                            <button
+                                class="dimension-header"
+                                data-dimension="relationships"
+                            >
+                                <div>
+                                    <span class="dimension-number">
+                                        01
+                                    </span>
+
+                                    <span class="dimension-name">
+                                        Relationships
+                                    </span>
+                                </div>
+
+                                <span class="dimension-arrow">
+                                    +
+                                </span>
+                            </button>
+
+
+                            <div
+                                class="dimension-content"
+                                id="relationships"
+                            >
+
+                                <div class="factor">
+
+                                    <button
+                                        class="factor-header"
+                                        data-factor="L"
+                                    >
+                                        <div>
+                                            <strong>L</strong>
+                                            <span>Lover</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+
+                                        <p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+
+                                        <div class="related-archetypes">
+
+                                            <div>
+                                                <b>LPE</b>
+                                                <span>Counselor</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LPW</b>
+                                                <span>Sage</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LPD</b>
+                                                <span>Philosopher</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LRE</b>
+                                                <span>Journeyman</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LRW</b>
+                                                <span>Poet</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LRD</b>
+                                                <span>Dryad</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LAE</b>
+                                                <span>Fairy</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LAW</b>
+                                                <span>Healer</span>
+                                            </div>
+
+                                            <div>
+                                                <b>LAD</b>
+                                                <span>Nymph</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>S</strong>
+                                            <span>Soldier</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+
+                                        <p>
+                                            Grounded, dependable, and naturally
+                                            inclined toward loyalty, duty,
+                                            and protecting the group.
+                                        </p>
+
+                                        <!-- S archetypes -->
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>H</strong>
+                                            <span>Hero</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+
+                                        <p>
+                                            Driven to act, overcome obstacles,
+                                            and make a meaningful difference
+                                            in the lives of others.
+                                        </p>
+
+                                        <!-- H archetypes -->
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IDEALS -->
+
+                        <div class="dimension">
+
+                            <button
+                                class="dimension-header"
+                                data-dimension="ideals"
+                            >
+                                <div>
+                                    <span class="dimension-number">
+                                        02
+                                    </span>
+
+                                    <span class="dimension-name">
+                                        Ideals
+                                    </span>
+                                </div>
+
+                                <span class="dimension-arrow">
+                                    +
+                                </span>
+                            </button>
+
+
+                            <div
+                                class="dimension-content"
+                                id="ideals"
+                            >
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>P</strong>
+                                            <span>Pragmatist</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Practical, grounded, and interested
+                                            in what actually works.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>R</strong>
+                                            <span>Romantic</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Guided by ideals, beauty, possibility,
+                                            and the belief that things can be
+                                            better than they are.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>A</strong>
+                                            <span>Altruist</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Motivated by compassion, generosity,
+                                            and the desire to improve the lives
+                                            of others.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BEHAVIORS -->
+
+                        <div class="dimension">
+
+                            <button
+                                class="dimension-header"
+                                data-dimension="behaviors"
+                            >
+                                <div>
+                                    <span class="dimension-number">
+                                        03
+                                    </span>
+
+                                    <span class="dimension-name">
+                                        Behaviors
+                                    </span>
+                                </div>
+
+                                <span class="dimension-arrow">
+                                    +
+                                </span>
+                            </button>
+
+
+                            <div
+                                class="dimension-content"
+                                id="behaviors"
+                            >
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>E</strong>
+                                            <span>Explorer</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Curious, energetic, and drawn toward
+                                            new experiences and possibilities.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>W</strong>
+                                            <span>Wayfarer</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Comfortable with uncertainty,
+                                            improvisation, and following a path
+                                            wherever it happens to lead.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="factor">
+
+                                    <button class="factor-header">
+                                        <div>
+                                            <strong>D</strong>
+                                            <span>Dreamer</span>
+                                        </div>
+
+                                        <span>+</span>
+                                    </button>
+
+                                    <div class="factor-content">
+                                        <p>
+                                            Imaginative, introspective, and
+                                            naturally drawn toward ideas,
+                                            possibilities, and inner worlds.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================
+                 METHODOLOGY TAB
+            ====================== -->
+
+            <section id="methodologyTab" class="tab-content">
+
+                <div class="page-container methodology">
+
+                    <div class="page-header">
+
+                        <div class="welcome-eyebrow">
+                            METHODOLOGY
+                        </div>
+
+                        <h2>
+                            How the test works
+                        </h2>
+
+                        <p>
+                            Your result isn't determined by a single
+                            question. Instead, your answers contribute
+                            points to several independent dimensions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-grid">
+
+                        <article class="method-card">
+
+                            <div class="method-number">
+                                01
+                            </div>
+
+                            <h3>
+                                Relationships
+                            </h3>
+
+                            <p>
+                                Lover, Soldier, or Hero.
+                                This dimension represents your
+                                natural orientation toward other
+                                people and your role within a group.
+                            </p>
+
+                        </article>
+
+
+                        <article class="method-card">
+
+                            <div class="method-number">
+                                02
+                            </div>
+
+                            <h3>
+                                Ideals
+                            </h3>
+
+                            <p>
+                                Pragmatist, Romantic, or Altruist.
+                                This dimension reflects the values
+                                and principles that tend to guide
+                                your decisions.
+                            </p>
+
+                        </article>
+
+
+                        <article class="method-card">
+
+                            <div class="method-number">
+                                03
+                            </div>
+
+                            <h3>
+                                Behaviors
+                            </h3>
+
+                            <p>
+                                Explorer, Wayfarer, or Dreamer.
+                                This dimension describes how you
+                                tend to interact with the world.
+                            </p>
+
+                        </article>
+
+
+                        <article class="method-card">
+
+                            <div class="method-number">
+                                04
+                            </div>
+
+                            <h3>
+                                Additional Traits
+                            </h3>
+
+                            <p>
+                                Your answers also contribute to
+                                independent traits such as empathy,
+                                ambition, openness, innovation,
+                                and independence.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="saveResultsModal" class="modal">
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card">
+
+            <button
+                id="closeSaveModal"
+                class="modal-close"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2>Save Your Results</h2>
+
+            <p>
+                Choose how you'd like to keep your results.
+            </p>
+
+            <div class="save-options">
+
+                <div class="save-option">
+
+                    <div class="save-option-icon">↓</div>
+
+                    <div>
+                        <h3>Save Webpage to Computer</h3>
+
+                        <p>
+                            Download a standalone webpage of your
+                            results that you can view later
+                        </p>
+                    </div>
+
+                    <button
+                        id="downloadResultsButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        Download HTML
+                    </button>
+
+                </div>
+
+
+                <div class="save-option">
+
+                    <div class="save-option-icon">☁</div>
+
+                    <div>
+                        <h3>Save Scores to Computer</h3>
+
+                        <p>
+                            Download a JSON of your scores 
+                            (contact Connor and he can recreate your results with this)
+                        </p>
+                    </div>
+
+                    <button
+                        id="downloadJSONButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        Download JSON
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="savedResultMessage"
+                class="saved-result-message"
+                hidden
+            ></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/archetypes.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/jTabs.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/saveResults.js"></script>
+    <script src="js/z.js"></script>
+
+</body>
+</html>
