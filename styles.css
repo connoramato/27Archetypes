@@ -53,7 +53,7 @@
     --text-secondary: #aebbaa;
     --text-muted: #7e8d7b;
 
-    --border: #354437;
+    --border: #44503b;
 
     --accent: #88a66f;
     --accent-dark: #6f8d59;
@@ -1527,7 +1527,7 @@ body.test-mode .main-content {
     letter-spacing: -1px;
 }
 
-.question-instruction {
+.question-text {
     margin:
         16px 0 30px;
 
@@ -1535,6 +1535,8 @@ body.test-mode .main-content {
         var(--text-secondary);
 
     line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 
@@ -1555,7 +1557,7 @@ body.test-mode .main-content {
     padding: 20px;
 
     border:
-        1px solid var(--border);
+        3px solid var(--border);
 
     border-radius: 15px;
 

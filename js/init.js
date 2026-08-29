@@ -75,12 +75,6 @@ const restartButton =
 const questionText =
     document.getElementById("questionText");
 
-const questionCategory =
-    document.getElementById("questionCategory");
-
-const questionInstruction =
-    document.getElementById("questionInstruction");
-
 const answersContainer =
     document.getElementById("answersContainer");
 

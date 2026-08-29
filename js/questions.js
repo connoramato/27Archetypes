@@ -31,9 +31,9 @@ const questions = [
     {
         id: "q1",
         text:
-            "The King's emissary comes to your cottage door, announced by a tucket from a bugle." 
+            "The King's emissary comes to your cottage door, announced by a tucket from a bugle. " 
              + "He declares that you are called to court at once to embark on a quest. What is your response?",
-        image: null,
+        image: "images/questions/serfs-cottage.jpg.avif",
 
         answers: [
             {
@@ -94,7 +94,7 @@ const questions = [
     {
         id: "q1-forced",
         text:
-            "The emissary insists you obey the summons, and his armed guards put their hands on the hilts of their weapons in a very persuasive way."
+            "The emissary insists you obey the summons, and his armed guards put their hands on the hilts of their weapons in a very persuasive way. "
              + "You are forced to go, but in what way is up to you. Do you:",
         image: null,
 

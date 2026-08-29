@@ -105,31 +105,10 @@ function renderQuestion() {
         `${percent}%`;
 
 
-    /* Category */
-
-    questionCategory.textContent =
-        question.category;
-
-
     /* Text */
 
     questionText.textContent =
         question.text;
-
-
-    /* Instruction */
-
-    if (question.type === "followup") {
-
-        questionInstruction.textContent =
-            "A follow-up question based on your previous answer.";
-
-    } else {
-
-        questionInstruction.textContent =
-            "Choose the answer that best describes you.";
-
-    }
 
 
     /* Image */

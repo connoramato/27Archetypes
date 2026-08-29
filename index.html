@@ -100,7 +100,7 @@
 
 
             <!-- =========================
-                BEGIN TAB
+                BEGIN TEST TAB
             ========================== -->
             <section id="beginTab" class="tab-content active">
                 <section id="startScreen" class="screen active">
@@ -179,11 +179,7 @@
                                 <img id="questionImage" src="" alt="">
                             </div>
 
-                            <div id="questionCategory" class="question-category"></div>
-
-                            <h2 id="questionText"></h2>
-
-                            <p id="questionInstruction" class="question-instruction">
+                            <p id="questionText" class="question-text">
                                 Choose the answer that best describes you.
                             </p>
 
@@ -377,364 +373,493 @@
 
                     <div class="archetype-accordion">
 
-                        <!-- RELATIONSHIPS -->
-
                         <div class="dimension">
-
-                            <button
-                                class="dimension-header"
-                                data-dimension="relationships"
-                            >
+                            <button class="dimension-header">
                                 <div>
-                                    <span class="dimension-number">
-                                        01
-                                    </span>
-
-                                    <span class="dimension-name">
-                                        Relationships
-                                    </span>
+                                    <span class="dimension-number">HPE</span>
+                                    <span class="dimension-name">The Campaginer</span>
                                 </div>
-
-                                <span class="dimension-arrow">
-                                    +
-                                </span>
+                                <span class="dimension-arrow">+</span>
                             </button>
-
-
-                            <div
-                                class="dimension-content"
-                                id="relationships"
-                            >
-
-                                <div class="factor">
-
-                                    <button
-                                        class="factor-header"
-                                        data-factor="L"
-                                    >
-                                        <div>
-                                            <strong>L</strong>
-                                            <span>Lover</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-
-                                        <p>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
                                             Naturally oriented toward connection,
                                             affection, and the emotional lives
                                             of others.
                                         </p>
-
-                                        <div class="related-archetypes">
-
-                                            <div>
-                                                <b>LPE</b>
-                                                <span>Counselor</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LPW</b>
-                                                <span>Sage</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LPD</b>
-                                                <span>Philosopher</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LRE</b>
-                                                <span>Journeyman</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LRW</b>
-                                                <span>Poet</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LRD</b>
-                                                <span>Dryad</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LAE</b>
-                                                <span>Fairy</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LAW</b>
-                                                <span>Healer</span>
-                                            </div>
-
-                                            <div>
-                                                <b>LAD</b>
-                                                <span>Nymph</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
                                 </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>S</strong>
-                                            <span>Soldier</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-
-                                        <p>
-                                            Grounded, dependable, and naturally
-                                            inclined toward loyalty, duty,
-                                            and protecting the group.
-                                        </p>
-
-                                        <!-- S archetypes -->
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>H</strong>
-                                            <span>Hero</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-
-                                        <p>
-                                            Driven to act, overcome obstacles,
-                                            and make a meaningful difference
-                                            in the lives of others.
-                                        </p>
-
-                                        <!-- H archetypes -->
-
-                                    </div>
-
-                                </div>
-
                             </div>
-
                         </div>
 
-
-                        <!-- IDEALS -->
-
                         <div class="dimension">
-
-                            <button
-                                class="dimension-header"
-                                data-dimension="ideals"
-                            >
+                            <button class="dimension-header">
                                 <div>
-                                    <span class="dimension-number">
-                                        02
-                                    </span>
-
-                                    <span class="dimension-name">
-                                        Ideals
-                                    </span>
+                                    <span class="dimension-number">HPW</span>
+                                    <span class="dimension-name">The Missionary</span>
                                 </div>
-
-                                <span class="dimension-arrow">
-                                    +
-                                </span>
+                                <span class="dimension-arrow">+</span>
                             </button>
-
-
-                            <div
-                                class="dimension-content"
-                                id="ideals"
-                            >
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>P</strong>
-                                            <span>Pragmatist</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Practical, grounded, and interested
-                                            in what actually works.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>R</strong>
-                                            <span>Romantic</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Guided by ideals, beauty, possibility,
-                                            and the belief that things can be
-                                            better than they are.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>A</strong>
-                                            <span>Altruist</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Motivated by compassion, generosity,
-                                            and the desire to improve the lives
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
                                             of others.
                                         </p>
-                                    </div>
-
                                 </div>
-
                             </div>
-
                         </div>
 
-
-                        <!-- BEHAVIORS -->
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HPD</span>
+                                    <span class="dimension-name">The Mage</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="dimension">
-
-                            <button
-                                class="dimension-header"
-                                data-dimension="behaviors"
-                            >
+                            <button class="dimension-header">
                                 <div>
-                                    <span class="dimension-number">
-                                        03
-                                    </span>
-
-                                    <span class="dimension-name">
-                                        Behaviors
-                                    </span>
+                                    <span class="dimension-number">HRE</span>
+                                    <span class="dimension-name">The Pioneer</span>
                                 </div>
-
-                                <span class="dimension-arrow">
-                                    +
-                                </span>
+                                <span class="dimension-arrow">+</span>
                             </button>
-
-
-                            <div
-                                class="dimension-content"
-                                id="behaviors"
-                            >
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>E</strong>
-                                            <span>Explorer</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Curious, energetic, and drawn toward
-                                            new experiences and possibilities.
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
                                         </p>
-                                    </div>
-
                                 </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>W</strong>
-                                            <span>Wayfarer</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Comfortable with uncertainty,
-                                            improvisation, and following a path
-                                            wherever it happens to lead.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="factor">
-
-                                    <button class="factor-header">
-                                        <div>
-                                            <strong>D</strong>
-                                            <span>Dreamer</span>
-                                        </div>
-
-                                        <span>+</span>
-                                    </button>
-
-                                    <div class="factor-content">
-                                        <p>
-                                            Imaginative, introspective, and
-                                            naturally drawn toward ideas,
-                                            possibilities, and inner worlds.
-                                        </p>
-                                    </div>
-
-                                </div>
-
                             </div>
+                        </div>
 
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HRW</span>
+                                    <span class="dimension-name">The Maverick</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HRD</span>
+                                    <span class="dimension-name">The Outlaw</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HAE</span>
+                                    <span class="dimension-name">The Revolutionary</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HAW</span>
+                                    <span class="dimension-name">The Ranger</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">HAD</span>
+                                    <span class="dimension-name">The Yeoman</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SPE</span>
+                                    <span class="dimension-name">The Gentleman/Lady</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SPW</span>
+                                    <span class="dimension-name">The Captain</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SPD</span>
+                                    <span class="dimension-name">The Scholar</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SRE</span>
+                                    <span class="dimension-name">The Troubador</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SRW</span>
+                                    <span class="dimension-name">The Connissuer</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SRD</span>
+                                    <span class="dimension-name">The Artisan</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SAE</span>
+                                    <span class="dimension-name">The Cheiftain</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SAW</span>
+                                    <span class="dimension-name">The Knight</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">SAD</span>
+                                    <span class="dimension-name">The Guardian</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LPE</span>
+                                    <span class="dimension-name">The Counselor</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LPW</span>
+                                    <span class="dimension-name">The Sage</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LPD</span>
+                                    <span class="dimension-name">The Philosopher</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LRE</span>
+                                    <span class="dimension-name">The Pilgrim</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LRW</span>
+                                    <span class="dimension-name">The Poet</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LRD</span>
+                                    <span class="dimension-name">The Dryad</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LAE</span>
+                                    <span class="dimension-name">The Fairy</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LAW</span>
+                                    <span class="dimension-name">The Physician</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dimension">
+                            <button class="dimension-header">
+                                <div>
+                                    <span class="dimension-number">LAD</span>
+                                    <span class="dimension-name">The Nymph</span>
+                                </div>
+                                <span class="dimension-arrow">+</span>
+                            </button>
+                            <div class="dimension-content">
+                                <div class="factor"><p>
+                                            Naturally oriented toward connection,
+                                            affection, and the emotional lives
+                                            of others.
+                                        </p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-
                 </div>
 
             </section>
@@ -759,9 +884,8 @@
                         </h2>
 
                         <p>
-                            Your result isn't determined by a single
-                            question. Instead, your answers contribute
-                            points to several independent dimensions.
+                            The creators of this test have no relevant credentials. 
+                            All questions, answers, and scoring was made up willy-nilly.
                         </p>
 
                     </div>
@@ -769,83 +893,322 @@
 
                     <div class="methodology-grid">
 
-                        <article class="method-card">
+                        <div class="archetype-accordion">
 
-                            <div class="method-number">
-                                01
+                            <!-- RELATIONSHIPS -->
+
+                            <div class="dimension">
+
+                                <button
+                                    class="dimension-header"
+                                    data-dimension="relationships"
+                                >
+                                    <div>
+                                        <span class="dimension-number">
+                                            01
+                                        </span>
+
+                                        <span class="dimension-name">
+                                            Relationships
+                                        </span>
+                                    </div>
+
+                                    <span class="dimension-arrow">
+                                        +
+                                    </span>
+                                </button>
+
+
+                                <div
+                                    class="dimension-content"
+                                    id="relationships"
+                                >
+
+                                    <p>
+                                        Lover, Soldier, or Hero.
+                                        This dimension represents your
+                                        natural orientation toward other
+                                        people and your role within a group.
+                                    </p>
+
+                                    <div class="factor">
+
+                                        <button
+                                            class="factor-header"
+                                            data-factor="L"
+                                        >
+                                            <div>
+                                                <strong>L</strong>
+                                                <span>Lover</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                For the Lover, depth and knowledge is the main end of all types of relationships,
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>S</strong>
+                                                <span>Soldier</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+
+                                            <p>
+                                                For the Soldier, the main end of all types of relationships is togetherness, solidarity, and shared experiences. 
+                                                Values loyalty, comradery, and protecting the group.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>H</strong>
+                                                <span>Hero</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+
+                                            <p>
+                                                For the Hero, the main end of all types of relationships is mutual growth and shared goals. Driven to act, overcome obstacles,
+                                                and make a meaningful difference in the lives of others.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <h3>
-                                Relationships
-                            </h3>
 
-                            <p>
-                                Lover, Soldier, or Hero.
-                                This dimension represents your
-                                natural orientation toward other
-                                people and your role within a group.
-                            </p>
+                            <!-- IDEALS -->
 
-                        </article>
+                            <div class="dimension">
+
+                                <button
+                                    class="dimension-header"
+                                    data-dimension="ideals"
+                                >
+                                    <div>
+                                        <span class="dimension-number">
+                                            02
+                                        </span>
+
+                                        <span class="dimension-name">
+                                            Ideals
+                                        </span>
+                                    </div>
+
+                                    <span class="dimension-arrow">
+                                        +
+                                    </span>
+                                </button>
 
 
-                        <article class="method-card">
+                                <div
+                                    class="dimension-content"
+                                    id="ideals"
+                                >
+                                
+                                    <p>
+                                    Pragmatist, Romantic, or Altruist.
+                                    This dimension reflects the values
+                                    and principles that tend to guide
+                                    your decisions.
+                                    </p>
 
-                            <div class="method-number">
-                                02
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>P</strong>
+                                                <span>Pragmatist</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                The main motivaiton and highest ideal in the Pragmatist's life is Truth. 
+                                                Practical, grounded, and interested in what actually works.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>R</strong>
+                                                <span>Romantic</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                The main motivation and highest ideal in the Romantic's life is Beauty.
+                                                Guided by their senses and the belief that all creation holds an unfolding mystery.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>A</strong>
+                                                <span>Altruist</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                The main motivation and highest ideal in teh Altruist's life is Goodness.
+                                                Led by compassion, generosity, and the desire to help.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <h3>
-                                Ideals
-                            </h3>
 
-                            <p>
-                                Pragmatist, Romantic, or Altruist.
-                                This dimension reflects the values
-                                and principles that tend to guide
-                                your decisions.
-                            </p>
+                            <!-- BEHAVIORS -->
 
-                        </article>
+                            <div class="dimension">
+
+                                <button
+                                    class="dimension-header"
+                                    data-dimension="behaviors"
+                                >
+                                    <div>
+                                        <span class="dimension-number">
+                                            03
+                                        </span>
+
+                                        <span class="dimension-name">
+                                            Behaviors
+                                        </span>
+                                    </div>
+
+                                    <span class="dimension-arrow">
+                                        +
+                                    </span>
+                                </button>
+
+                                <div
+                                    class="dimension-content"
+                                    id="behaviors"
+                                >
+                                    <p>
+                                    Explorer, Wayfarer, or Dreamer.
+                                    This dimension describes how you
+                                    tend to interact with the world.
+                                    </p>
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>E</strong>
+                                                <span>Explorer</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                An Explorer is informed by the external and drawn toward new experiences and possibilities.
+                                                They are focused outward and react accordingly.
+                                            </p>
+                                        </div>
+
+                                    </div>
 
 
-                        <article class="method-card">
+                                    <div class="factor">
 
-                            <div class="method-number">
-                                03
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>W</strong>
+                                                <span>Wayfarer</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                A wayfarer is informed by an integrated sense of self and environment. They wonder as they wander. 
+                                                They are more comfortable with uncertainty, but stretch their focus between inward and outward.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="factor">
+
+                                        <button class="factor-header">
+                                            <div>
+                                                <strong>D</strong>
+                                                <span>Dreamer</span>
+                                            </div>
+
+                                            <span>+</span>
+                                        </button>
+
+                                        <div class="factor-content">
+                                            <p>
+                                                A dreamer is informed by introspection, their imagination, and their inner wordls.
+                                                They are focused inward and rely on mental processing.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <h3>
-                                Behaviors
-                            </h3>
+                        </div>
 
-                            <p>
-                                Explorer, Wayfarer, or Dreamer.
-                                This dimension describes how you
-                                tend to interact with the world.
-                            </p>
+                    </div>
 
-                        </article>
-
-
-                        <article class="method-card">
-
-                            <div class="method-number">
-                                04
-                            </div>
-
-                            <h3>
-                                Additional Traits
-                            </h3>
-
-                            <p>
-                                Your answers also contribute to
-                                independent traits such as empathy,
-                                ambition, openness, innovation,
-                                and independence.
-                            </p>
-
-                        </article>
+                </section>
 
                     </div>
 
