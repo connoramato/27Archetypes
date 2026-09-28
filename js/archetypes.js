@@ -3,208 +3,193 @@
 ========================================================= */
 
 const archetypes = {
-
-    /* =====================================================
-       LOVER
-    ===================================================== */
-
     LPE: {
-        name: "The Counselor",
-        image: "images/LPE.jpg",
+        name: "The Seer",
+        image: "images/archetypes/Seer.png",
         description:
-            "Everyone’s personal therapist. The Counselor is naturally attentive to the people around them, eager to listen, understand, and help others work through their problems."
+            "The Seer interprets the world around them, and their prophecies are rooted in truth. Their wisdom seems to come from outside themselves. The Seer looks through your eyes into your soul and, above all, seeks deep knowledge of people."
     },
 
     LPW: {
         name: "The Sage",
-        image: "images/LPW.jpg",
+        image: "images/archetypes/Sage.png",
         description:
-            "Wise and thoughtful. The Sage tends to see situations from a broader perspective and is often the person others turn to for advice."
+            "The Sage is incredibly mysterious and personable at the same time. They are incredibly wise and know how to integrate the exterior and interior lives. The Sage is a fighter for the truth and a lover for their beloved."
     },
 
     LPD: {
         name: "The Philosopher",
-        image: "images/LPD.jpg",
+        image: "images/archetypes/fairy.jpg",
         description:
-            "Thinks and dwells. The Philosopher is introspective and contemplative, often spending considerable time exploring ideas, meanings, and possibilities."
+            "The Philosopher knows not all questions can be answered, but asks them nonetheless. They are very contemplative and process their musings from within. The Philosopher values meaningful relationships and always seeks the truth."
     },
 
     LRE: {
-        name: "The Journeyman",
-        image: "images/LRE.jpg",
+        name: "The Troubadour",
+        image: "images/archetypes/Troubadour.png",
         description:
-            "Wants adventure. The Journeyman finds meaning through experience, movement, and discovery, preferring to learn about life by living it."
+            "The Troubadour roves the country over, sharing their music and stories with all they meet. Though they are an open book to many, they value their deepest friendships most of all. The Troubadour experiences the world with emotion and sees the beauty in and through pain."
     },
 
     LRW: {
         name: "The Poet",
-        image: "images/LRW.jpg",
+        image: "images/archetypes/Poet.png",
         description:
-            "The not-so-hopeless romantic. The Poet balances high idealism and optimism with openness and improvisation. They may get caught up, but will bounce right back—often to their old ways. They listen intently and absorb everything, and can talk for hours on end."
+            "The Poet longs to write their heart out on paper, or put their soul in a poem. They do not tend to be more inward or outward, and instead are either intently focused on the person in front of them or thinking of far-off things. The Poet loves only the deepest of relationships, and greatly appreciates beauty."
     },
 
     LRD: {
-        name: "The Dryad",
-        image: "images/LRD.jpg",
+        name: "The Artist",
+        image: "images/archetypes/Artist.png",
         description:
-            "A daydreamer and nature lover who cannot quite escape their melancholy, yet remains as sweet as can be. The Dryad has a strong sense of wonder and feels deeply connected to the natural world. Bound to one tree forever, if it withers, they die."
+            "The Artist has a particular taste for beauty and a great talent in the arts. They are self-reflective and have a strong interior life. The Artist wishes to capture their muse in their work in order to know them deeper, and through their art they reveal the deepest parts of themselves."
     },
 
     LAE: {
         name: "The Fairy",
-        image: "images/LAE.jpg",
+        image: "images/archetypes/Fairy.png",
         description:
-            "Very helpful and just wants to have fun. The Fairy brings warmth, playfulness, and generosity to the people around them."
+            "The Fairy is very caring and longs for great love and friends for whom they can care for. They adore woodland creatures, are very playful, and value wonder and magic. The Fairy often conflates their deep desire to help with their need to add a bit of mischief."
     },
 
     LAW: {
-        name: "The Healer",
-        image: "images/LAW.jpg",
+        name: "The Physician",
+        image: "images/archetypes/Physician.png",
         description:
-            "Caring and kind, but confident. The Healer wants to make things better for others while remaining secure enough in themselves to take action when it is needed."
+            "The Physician is a great healer in many ways, and they take this life work of theirs very seriously. The good doctor is very capable and balances interior processing with lived experience. The Physician values goodness in people and themselves, and wants to know those close to them even closer."
     },
 
     LAD: {
         name: "The Nymph",
-        image: "images/LAD.jpg",
+        image: "images/archetypes/Nymph.png",
         description:
-            "Shy and introverted, but full of talent and eager to help. The Nymph has a quiet generosity and a rich inner world that may take time for others to discover."
+            "The Nymph is the mysterious water spirit who adores the sea creatures and comes to the aid of lost sailors at sea. They can often seem lonely and melancholic, but they are always ready to spread joy. The Nymph is inward, caring, values depth in relationships, and upholds goodness in all they do."
     },
 
-
-    /* =====================================================
-       SOLDIER
-    ===================================================== */
-
     SPE: {
-        name: "The Gentleman",
-        image: "images/SPE.jpg",
+        name: "The Gentleman / The Lady",
+        image: "images/archetypes/Gentleman.png",
         description:
-            "Intellectual, bold, and full of crazy ideas. The Gentleman combines confidence and curiosity with a willingness to entertain unconventional possibilities."
+            "The Gentleman and the Lady are classic noble courtiers. Always desiring to be where the people are, they are well versed in the politics of the day. The Gentleman reacts to his environment, though remains stoic about it. The Lady reacts to her environment, yet keeps up all appearances and charm."
     },
 
     SPW: {
-        name: "The Captain",
-        image: "images/SPW.jpg",
+        name: "The Herald",
+        image: "images/archetypes/Herald.png",
         description:
-            "Rallies their men to the seas. The Captain is dependable and commanding, naturally bringing people together around a common purpose."
+            "The Herald proclaims the message in full, carrying the banner of truth wherever they go. Navigating political lines and battlefields, the Herald balances interactions with others and their own interior life. The Herald can also play a mean bugle."
     },
 
     SPD: {
         name: "The Scholar",
-        image: "images/SPD.jpg",
+        image: "images/archetypes/Scholar.png",
         description:
-            "Grows through learning. The Scholar is disciplined and curious, treating knowledge and mastery as some of life's most rewarding pursuits."
+            "The Scholar seeks the truth through devoted study. They love to have many peers with whom they can share their work and partake in stimulating conversation. The Scholar processes all they learn and experience inwardly."
     },
 
     SRE: {
-        name: "The Troubadour",
-        image: "images/SRE.jpg",
+        name: "The Forester",
+        image: "images/archetypes/Forester.png",
         description:
-            "An entertainer. The Troubadour thrives on expression, performance, and bringing energy to the people around them."
+            "The Forester is a conservationist and pledges their duty to conserve the beauty around them. As steward of the woods, they take in their environment and react accordingly. Ready to defend their cause at arms, the Forester also longs to be among their fellow soldiers."
     },
 
     SRW: {
-        name: "The Connoisseur",
-        image: "images/SRW.jpg",
+        name: "The Chieftain",
+        image: "images/archetypes/Chieftain.png",
         description:
-            "Has the best taste. The Connoisseur appreciates quality, beauty, and experience, developing a refined sense for what is worth seeking out."
+            "The Chieftain is the head of their tribe. Making life outside of civilized society, clinging to the old ways of being connected to nature around us, they lead a simple integrated life. A great and fatherly leader, the Chieftain loves to be among their people, and will not hesitate to defend them at arms."
     },
 
     SRD: {
         name: "The Artisan",
-        image: "images/SRD.jpg",
+        image: "images/archetypes/Artisan.png",
         description:
-            "Devoted to their craft, and a lover of beauty in its right order. The Artisan can seem cold but has a soft inside. They may be quiet, but become jovial when among close friends."
+            "The Artisan is handy with tools and can build, fix, or design anything. They believe all useful things can be beautiful, too. The Artisan is self-reflective, devoted to craftsmanship, and loyal to friends."
     },
 
     SAE: {
-        name: "The Chieftain",
-        image: "images/SAE.jpg",
+        name: "The Yeoman",
+        image: "images/archetypes/Yeoman.png",
         description:
-            "Gathers and leads. The Chieftain wants the crew together and naturally takes responsibility for keeping people united and moving in the same direction."
+            "The Yeoman is a gracious host to travelers, and a stalwart helper to their peers and tenants. They take good care of their land, and make a good friend to have beside you in battle. An independent landowner, the Yeoman does things their own way, and likes to stretch the rules."
     },
 
     SAW: {
         name: "The Knight",
-        image: "images/SAW.jpg",
+        image: "images/archetypes/Knight.png",
         description:
-            "Dutiful, balanced, and a do-gooder. The Knight is chivalrous and dependable, guided by a strong sense of responsibility toward others."
+            "The Knight exemplifies chivalry and defends the vulnerable. They are courageous, virtuous, and magnanimous. The Knight has a very good time at the local tavern."
     },
 
     SAD: {
-        name: "The Steward",
-        image: "images/SAD.jpg",
+        name: "The Blacksmith",
+        image: "images/archetypes/Blacksmith.png",
         description:
-            "Quietly devoted to the people and principles in their care. The Steward believes that a good life is built through responsibility, service, and tending to what has been entrusted to them."
+            "The Blacksmith loves to be with friends, but their best friends are their hammer and anvil. Working hard in the heat of the furnace is a great environment for contemplation and self-reflection. The Blacksmith is always looking to guard their friends with armor, give them meaningful metalwork that lasts, and relax with them when the work is done."
     },
 
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
     HPE: {
-        name: "The Campaigner",
-        image: "images/HPE.jpg",
+        name: "The Mage",
+        image: "images/archetypes/Mage.png",
         description:
-            "Persuasive and energetic. The Campaigner knows how to rally people behind an idea and is not afraid to make their case."
+            "The Mage desires to be a counselor to all friends, to grow with them and go on journeys with them. They are wise and are motivated by acquiring rare knowledge. The Mage is liable to react to any problem with a fireball."
     },
 
     HPW: {
         name: "The Missionary",
-        image: "images/HPW.jpg",
+        image: "images/archetypes/Missionary.png",
         description:
-            "Goes out of themselves. The Missionary is willing to sacrifice comfort and personal convenience in pursuit of a cause or purpose."
+            "The Missionary desires to grow in virtue and help those around them grow in virtue as well. They learn theology and preach the truth, integrating the contemplative life with spreading the gospel."
     },
 
     HPD: {
-        name: "The Mage",
-        image: "images/HPD.jpg",
+        name: "The Alchemist",
+        image: "images/archetypes/Alchemist.png",
         description:
-            "Has many hobbies they work to master. The Mage is introverted, curious, and driven to develop a wide range of specialized abilities."
+            "The Alchemist is focused on becoming their best self through study and practice and keeps a handful of friends with whom they share their lofty goals. Logical and problem-solving, they are very inward and process things in their own mind."
     },
 
     HRE: {
-        name: "The Pioneer",
-        image: "images/HRE.jpg",
+        name: "The Seafarer",
+        image: "images/archetypes/Seafarer.png",
         description:
-            "Ambitious and nature-loving, with a taste for danger. The Pioneer is willing to take risks in pursuit of new territory, experiences, and possibilities."
+            "The Seafarer is an explorer at heart. They long for the sea and adventure, strive to be the best sailors they can be, and are born leaders. If they could, the Seafarer would travel the world and see all the beauty it has to offer."
     },
 
     HRW: {
-        name: "The Maverick",
-        image: "images/HRW.jpg",
+        name: "The Pilgrim",
+        image: "images/archetypes/Pilgrim.png",
         description:
-            "Countercultural and independent. The Maverick is skeptical of convention and prefers to find their own path rather than follow one laid out by others."
+            "The Pilgrim has embarked once again to see beautiful holy sites and shrines! Their ideal adventure is a pilgrimage for all the sights they may see and all the ways they may grow in virtue through it. The Pilgrim is a friend on the road to all, but aims to fill their circles with holy people and balance their outward devotion with a contemplative life."
     },
 
     HRD: {
-        name: "The Cowboy",
-        image: "images/HRD.jpg",
+        name: "The Dryad",
+        image: "images/archetypes/Dryad.png",
         description:
-            "Lonely, independent, and comfortable riding their own trail. The Cowboy may keep others at a distance while carrying a strong personal code beneath the surface."
+            "The Dryad is very encouraging and their presence emanates strength into others, though they are very inward themselves. They love nature, and one day hope to become a tree so they can enjoy the woods."
     },
 
     HAE: {
-        name: "The Revolutionary",
-        image: "images/HAE.jpg",
+        name: "The Rebel",
+        image: "images/archetypes/Rebel.png",
         description:
-            "William Wallace. The Revolutionary is driven to challenge injustice, rally others, and fight for a cause they believe is worth the struggle."
+            "The Rebel steals from the rich and gives to the poor. Always willing to help, or cause a little mischief. The Rebel is liable to start fires in a defiant fervor."
     },
 
     HAW: {
         name: "The Ranger",
-        image: "images/HAW.jpg",
+        image: "images/archetypes/Ranger.png",
         description:
-            "Aragorn. The Ranger is capable, independent, and protective, combining humility with the strength to step forward when others need them."
+            "The Ranger roams the wilderness, preparing themselves for their fated duty. They have a clan of good friends who help each other on their quests. The Ranger is the drifting stranger, who protects the vulnerable and fights for good."
     },
 
     HAD: {
-        name: "The Yeoman",
-        image: "images/HAD.jpg",
+        name: "The Apothecary",
+        image: "images/archetypes/Apothecary.png",
         description:
-            "Robin Hood. The Yeoman is grounded, courageous, and devoted to ordinary people, willing to challenge those in power when doing so serves a greater good."
+            "The Apothecary spends their time growing herbs and brewing potions, and always has the best remedy. Though contemplative and focused on their work, they are the most helpful people and very protective of their own. The Apothecary loves bettering their garden, their recipes, and their relationships."
     }
 
 };

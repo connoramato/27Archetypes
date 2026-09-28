@@ -4,6 +4,9 @@
 
 let state = {
 
+    questionQueue: [],
+    total: 1,
+
     currentQuestionIndex: 0,
 
     /*
@@ -19,13 +22,6 @@ let state = {
     */
 
     scores: {},
-
-    /*
-        Keeps track of questions dynamically added
-        as follow-ups.
-    */
-
-    activeQuestions: [],
 
     /*
         Stores the user's answer for every question.

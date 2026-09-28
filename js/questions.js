@@ -21,17 +21,37 @@
         Romantic +1
         Empathy +3
 */
-man_woman = "man"
-formal = "sir"
-pronoun = "he"
-possesive = "his"
-object_noun = "him"
+let questions = [{
+        id: `character`,
+        text:
+            `You lead the simple life of a serf. You live in a very small cottage in the countryside. Are you man or woman?`,
 
-const questions = [
+        answers: [
+            {
+                text:
+                    `I am a man`,
+                male: true
+            },
+            {
+                text:
+                    `I am a woman`,
+                male: false
+            }
+        ]
+    }
+];
 
+function calculateQuestionsTotal() {
+    return questions.filter(val => val.type != "followup").length
+}
 
+function initQuestions(
+man_woman = "man",
+pronoun = "he",
+possesive = "his",
+object_noun = "him"){
 
-
+    questions = [
     {
         id: `q1`,
         text:
@@ -266,7 +286,7 @@ const questions = [
     {
         id: `q2`,
         text:
-            `You are led into town and out on the highway to the city. ` 
+            `And so you embark! You travel with the emissary into town and out on the highway to the city. ` 
              + `You can detect a hint of mocking as the emissary turns to you an asks "A question, good fellow: do you like long journeys?"`,
         image: `images/questions/highway.jpg.webp`,
 
@@ -320,7 +340,7 @@ const questions = [
     {
         id: `q3`,
         text:
-            `You arrive to the capital city, entering throuhg looming gates and turning down bustling streets. How do you feel?`,
+            `You arrive to the capital city, entering through looming gates and turning down bustling streets. How do you feel?`,
         image: `images/questions/bustling-medeival-street.jpg`,
 
         answers: [
@@ -362,7 +382,7 @@ const questions = [
         text:
             `You arrive at the kings palace. The emissary goes in and tells you to wait in the plaza, where you see two people coming from the univeristy nearby. ` 
              + ` You gather from their conversation that one is a scholar and the other a philosopher. When they notice you, the scholar desperately seeks another opinion: `
-             + `"Good ${formal}! You must help us settle this debate. I say that, given humans are inherently relational, the end of such sociability is comradery and mutual support. `
+             + `"Excuse me, you there! You must help us settle this debate. I say that, given humans are inherently relational, the end of such sociability is comradery and mutual support. `
              + `My friend here disagrees, he says most social bonds are meaningless when compared to the knowledge shared only with those closest to us. What is your thought?"`,
         image: `images/questions/medival-marketplace.jpg`,
 
@@ -590,8 +610,8 @@ const questions = [
     {
         id: `q5`,
         text:
-            `At that moment, the courtyard gate opens, and an official leads you into the palace. As you walk through the courtyard, you begin eyeing an aged artist atop some scaffolding, sculpting the ornate edifice. `
-            + `"Beauty is in the details, young ${formal}" he says, noticing your curiosity, "Are you a lover of art?"`,
+            `At that moment, the courtyard gate opens, and an official appears. You say goodbye to your new friends and follow him into the palace. As you walk through the courtyard, you begin eyeing an aged artist atop some scaffolding, sculpting the ornate edifice. `
+            + `"Beauty is in the details, youngling" he says, noticing your curiosity, "Are you a lover of art?"`,
         image: "images/questions/edifice.jpg",
         answers: [
             {
@@ -685,6 +705,7 @@ const questions = [
             + `Before you can think of a way out of this, or even utter 'your grace', the king quickly sends you on your way. `
             + `"Our official will equip you for the journey. We thank you again, loyal subject, for your help in this most urgent matter" You are led away from the throne and out of the room. `
             + `As the door closes, you glimpse the king staring inquisitively at you. You are left standing at a great dark oak door thinking of how you might save your brother's life and, just as imperatively, save your own`,
+        image: "throne1.webp",
         answers: [
             {
                 text:
@@ -728,7 +749,7 @@ const questions = [
     {
         id: "q7",
         text:
-            `You are led to the palace stables to set off again. On your way you meet a couple arriving to the palace. The officials all greet them with a bow`
+            `After a restless night's sleep, you are led to the palace stables to begin the journey. On your way you meet a couple arriving to the palace. The officials all greet them with a bow`
             + ` The gentleman greets you ponderously, then addresses the servants. "Go, prepare the wain. I'll have a word with this one" He turns to you. `
             + `"Good morrow, I expect your the one their sending up north?" You reply the affirmative. "Ah" He gives a look of pity. "I am sorry, you must feel great fear at what you have been compelled to do. However, I may have some helpful advice for you" `
             + `His lady chimes in "Oh, and it would be prudent to keep this information close to your chest" imploring caution with her eyes. The gentleman looks down the hall before continuing `
@@ -736,7 +757,7 @@ const questions = [
             + `The lady picks up the point "Fear not, young traveller. Though what lies in store will be difficult, you do not know when a friend may be around the corner." The gentleman adds `
             + `"Be on the look out for the right oppurunity. As for what we will do... we'll try our best here with the king in his court. We are not afraid of a little politicking. Be well."`
             + `The lady sends you on your way "Fare thee well!"`,
-        image:"images/questions/lord.jpg",
+        image:"images/questions/lord.png",
         answers: [
             {
                 text:
@@ -1005,4 +1026,7 @@ const questions = [
 
         ]
     }
-];
+    ];
+
+    startTest()
+}

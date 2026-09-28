@@ -10,7 +10,7 @@ function restartTest() {
 
     state.currentQuestionIndex = 0;
 
-    state.activeQuestions = [];
+    state.questionQueue = [];
 
     state.answerHistory = {};
 

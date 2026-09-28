@@ -26,7 +26,9 @@ function startTest() {
 
     state.currentQuestionIndex = 0;
 
-    state.activeQuestions = [...questions];
+    state.questionQueue = [questions[0]]
+
+    state.total = calculateQuestionsTotal();
 
     state.answerHistory = {};
 
@@ -71,31 +73,22 @@ function showScreen(screen) {
 function renderQuestion() {
 
     const question =
-        state.activeQuestions[
-            state.currentQuestionIndex
-        ];
+        state.questionQueue[state.questionQueue.length - 1]
 
     if (!question) {
         finishTest();
         return;
     }
 
-
-    /* Counter */
-
-    const displayNumber =
-        state.currentQuestionIndex + 1;
-
-    const total =
-        state.activeQuestions.length;
+    const displayNumber = state.questionQueue.length;
 
     questionCounter.textContent =
-        `Question ${displayNumber} of ${total}`;
+        `Question ${displayNumber} of ${state.total}`;
 
 
     const percent =
         Math.round(
-            (state.currentQuestionIndex / total) * 100
+            ((displayNumber-1) / state.total) * 100
         );
 
     progressPercent.textContent =
@@ -131,36 +124,59 @@ function renderQuestion() {
 
     }
 
-
     /* Answers */
 
     answersContainer.innerHTML = "";
 
+    if (question.id == "character"){
+        const button = document.createElement("button");
+        button.className = "answer-button";
+        button.textContent = question.answers[0].text;
+        button.addEventListener(
+            "click",
+            () => initQuestions(man_woman = "man",
+                                pronoun = "he",
+                                possesive = "his",
+                                object_noun = "him")
+        );
+        const button2 = document.createElement("button");
+        button2.className = "answer-button";
+        button2.textContent = question.answers[1].text;
+        button2.addEventListener(
+            "click",
+            () => initQuestions(man_woman = "woman",
+                                pronoun = "she",
+                                possesive = "hers",
+                                object_noun = "her")
+        );
+        answersContainer.appendChild(button);
+        answersContainer.appendChild(button2);
+    } else {
+        question.answers.forEach(
+            (answer, answerIndex) => {
 
-    question.answers.forEach(
-        (answer, answerIndex) => {
+                const button =
+                    document.createElement("button");
 
-            const button =
-                document.createElement("button");
+                button.className =
+                    "answer-button";
 
-            button.className =
-                "answer-button";
+                button.textContent =
+                    answer.text;
+                
+                button.addEventListener(
+                    "click",
+                    () => selectAnswer(
+                        answer,
+                        answerIndex
+                    )
+                );
 
-            button.textContent =
-                answer.text;
+                answersContainer.appendChild(button);
 
-            button.addEventListener(
-                "click",
-                () => selectAnswer(
-                    answer,
-                    answerIndex
-                )
-            );
-
-            answersContainer.appendChild(button);
-
-        }
-    );
+            }
+        );
+    }
 
     backButton.disabled =
         state.currentQuestionIndex === 0;
@@ -188,58 +204,31 @@ function selectAnswer(
     answer,
     answerIndex
 ) {
-
     const question =
-        state.activeQuestions[
-            state.currentQuestionIndex
-        ];
+        state.questionQueue[state.questionQueue.length - 1]
 
-
-    /*
-        Store the answer so we can reverse it later.
-    */
-
-    state.answerHistory[question.id] = {
-
+    state.answerHistory[question.id] = { //Store the answer so we can reverse it later.
         answerIndex: answerIndex,
-
         answer: answer
-
     };
 
-
-    /*
-        Add the answer's scores.
-    */
-
-    applyScore(answer, +1);
-
-
-    /*
-        Insert a conditional follow-up if necessary.
-    */
+    applyScore(answer, +1); //Add the answer's scores.
 
     if (answer.followUp) {
-
-        insertFollowUp(
-            answer.followUp
-        );
-
+        state.total++;
+        while (questions[state.currentQuestionIndex++].id != answer.followUp);
+        state.questionQueue.push(questions[state.currentQuestionIndex-1]);
+    } else {
+        while (questions[state.currentQuestionIndex++].type == "followup");
+        state.questionQueue.push(questions[state.currentQuestionIndex]);
     }
-
-
-    /*
-        Move forward.
-    */
-
-    state.currentQuestionIndex++;
 
 
     setTimeout(() => {
 
         renderQuestion();
 
-    }, 180);
+    }, 120);
 
 }
 
@@ -279,156 +268,37 @@ function applyScore(
 
 function goBack() {
 
-    /*
-        Can't go back from the first question.
-    */
-
     if (state.currentQuestionIndex <= 0) {
         return;
     }
 
+    const question = state.questionQueue.pop(); //remove!
 
-    /*
-        The question we're currently viewing hasn't
-        been answered yet.
-
-        So move back to the question that produced it.
-    */
-
-    state.currentQuestionIndex--;
-
-
-    const question =
-        state.activeQuestions[
-            state.currentQuestionIndex
-        ];
-
+    const prevID = state.questionQueue[state.questionQueue.length - 1].id; 
+    while (questions[--state.currentQuestionIndex].id != prevID); //rewind index
 
     const history =
         state.answerHistory[
             question.id
         ];
 
+    if (question.type == "followup") state.total--;
 
     if (!history) {
-
         renderQuestion();
-
         return;
-
     }
-
-
-    /*
-        Reverse the score from the answer.
-    */
 
     applyScore(
         history.answer,
         -1
-    );
-
-
-    /*
-        If the answer created a follow-up,
-        remove that follow-up.
-    */
-
-    if (history.answer.followUp) {
-
-        removeFollowUp(
-            history.answer.followUp
-        );
-
-    }
-
-
-    /*
-        Remove this answer from history.
-
-        The user is now looking at the question
-        as if they haven't answered it yet.
-    */
+    ); // Reverse the score from the answer.
 
     delete state.answerHistory[
         question.id
     ];
 
-
     renderQuestion();
-
-}
-
-function removeFollowUp(questionId) {
-
-    const index =
-        state.activeQuestions.findIndex(
-            question =>
-                question.id === questionId
-        );
-
-
-    if (index === -1) {
-        return;
-    }
-
-
-    state.activeQuestions.splice(
-        index,
-        1
-    );
-
-}
-
-/* =========================================================
-   11. INSERT FOLLOW-UP
-========================================================= */
-
-function insertFollowUp(questionId) {
-
-    /*
-        Find the question definition.
-    */
-
-    const followUp =
-        questions.find(
-            question => question.id === questionId
-        );
-
-    if (!followUp) {
-
-        console.warn(
-            `Follow-up question "${questionId}" not found.`
-        );
-
-        return;
-    }
-
-
-    /*
-        Prevent duplicate insertion.
-    */
-
-    const alreadyExists =
-        state.activeQuestions.some(
-            question => question.id === questionId
-        );
-
-    if (alreadyExists) {
-        return;
-    }
-
-
-    /*
-        Insert directly after the current question.
-    */
-
-    state.activeQuestions.splice(
-        state.currentQuestionIndex + 1,
-        0,
-        followUp
-    );
-
 }
 
 

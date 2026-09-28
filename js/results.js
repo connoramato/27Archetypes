@@ -322,47 +322,7 @@ function calculateMaximumScores() {
     });
 
     questions.forEach(question => {
-
-        question.answers.forEach(answer => {
-
-            if (!answer.score) return;
-
-            Object.entries(answer.score).forEach(
-                ([key, points]) => {
-
-                    if (maximums[key] === undefined) {
-                        maximums[key] = 0;
-                    }
-
-                    /*
-                        We use the largest number that a single
-                        answer can contribute to this trait for
-                        each question.
-                    */
-
-                    maximums[key] = Math.max(
-                        maximums[key],
-                        maximums[key] || 0
-                    );
-
-                }
-            );
-
-        });
-
-    });
-
-    /*
-        The above alone isn't enough because we need to find
-        the maximum contribution from EACH question.
-    */
-
-    Object.keys(maximums).forEach(key => {
-        maximums[key] = 0;
-    });
-
-
-    questions.forEach(question => {
+        if (question.type == "followup") return;
 
         let questionMaximum = {};
 
@@ -398,6 +358,51 @@ function calculateMaximumScores() {
     return maximums;
 }
 
+function calculateMinimumScores() {
+
+    const minimums = {};
+
+    Object.keys(scoreDefinitions).forEach(key => {
+        minimums[key] = 0;
+    });
+
+    questions.forEach(question => {
+        if (question.type == "followup") return;
+
+        let questionMinimum = {};
+
+        question.answers.forEach(answer => {
+
+            if (!answer.score) return;
+
+            Object.entries(answer.score).forEach(
+                ([key, points]) => {
+
+                    if (
+                        questionMinimum[key] === undefined ||
+                        points < questionMinimum[key]
+                    ) {
+                        questionMinimum[key] = points;
+                    }
+
+                }
+            );
+
+        });
+
+        Object.entries(questionMinimum).forEach(
+            ([key, points]) => {
+
+                minimums[key] += points;
+
+            }
+        );
+
+    });
+
+    return minimums;
+}
+
 function renderTraitResults() {
 
     const container =
@@ -417,6 +422,7 @@ function renderTraitResults() {
         Convert each raw score into a percentage.
     */
    maximums = calculateMaximumScores()
+   minimums = calculateMinimumScores()
 
     const traits = traitKeys.map(key => {
 
@@ -427,13 +433,16 @@ function renderTraitResults() {
             state.scores[key] || 0;
 
         const maxScore =
-            maximums[key]*.95 || 1;
+            maximums[key] || 1;
+        
+        const minScore =
+            maximums[key] || 0;
 
         let rawPercentage = Math.round(
-                (rawScore / maxScore) * 100
+                100 * ((rawScore - minScore) / (maxScore - minScore))
             );
         const percentage =
-            rawPercentage > 100 ? 100 : rawPercentage;
+            rawPercentage > 100 ? 100 : (rawPercentage < 0 ? 0 : rawPercentage);
 
 
         return {
