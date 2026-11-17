@@ -1,0 +1,4430 @@
+[
+    {
+        "id": "q1",
+        "answers": [
+            {
+                "text":
+                    "Follow him immediately! This is a once in a lifetime oppurtunity",
+                "score": {
+                    "E": 3,
+                    "H": 2
+                }
+            },
+            {
+                "text":
+                    "Start packing your bags. For King and Country!",
+                "score": {
+                    "E": 2,
+                    "W": 1,
+                    "S": 1,
+                    "Honor": 1
+                }
+            },
+            {
+                "text":
+                    "Welcome him in for tea. No traveller should go without hospitality. The quest will come when it will",
+                "score": {
+                    "A": 3,
+                    "R": 1
+                },
+                "followUp": "q1-tea"
+            },
+            {
+                "text":
+                    "Ask about the quest. I have to know what this is all about before I embark",
+                "score": {
+                    "P": 3
+                },
+                "followUp": "q1-secret"
+            },
+            {
+                "text":
+                    "Suspicion. I do not want to leave my cottage...",
+                "score": {
+                    "E": -2,
+                    "D": 1,
+                    "L": 1
+                },
+                "followUp": "q1-forced"
+            }
+        ]
+    },
+
+    {
+        "id": "q1-forced",
+        "image": "images/questions/cottage.jpg",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "Obey calmly with your head up. Cause no reason for conflict, but show them you aren't one to be trodden down",
+                "score": {
+                    "W": 2,
+                    "P": 1,
+                    "S": -1,
+                    "L": 1,
+                    "Honor": 1
+                }
+            },
+            {
+                "text":
+                    "Complain all the while about how they have inconvenienced you",
+                "score": {
+                    "L": -1,
+                    "A": -2,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Kick and Scream until they are forced to escort you themselves",
+                "score": {
+                    "A": -1,
+                    "E": 1,
+                    "W": -1,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Feeze up in fear (be honest)",
+                "score": {
+                    "D": 1,
+                    "W": -1,
+                    "S": 1,
+                    "Courage": -2
+                }
+            }
+        ]
+    },
+     {
+        "id": "q1-secret",
+        "text":
+            "The emissary answers none of your questions. Apparently, the object of the quest is a secret. You are forced to obey the summons. Do",
+        "image": "images/questions/cottage.jpg",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "Glare suspiciously at the emissary, and maintain all caution on the journey. Trust no one",
+                "score": {
+                    "P": 1,
+                    "D": 1,
+                    "S": -1
+                }
+            },
+            {
+                "text":
+                    "Complain all the while about how they have inconvenienced you",
+                "score": {
+                    "L": -1,
+                    "A": -2,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Kick and Scream until they are forced to escort you themselves",
+                "score": {
+                    "A": -1,
+                    "E": 1,
+                    "W": -1,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Proceed calmly. There is no use worrying about what is in store",
+                "score": {
+                    "P": 1,
+                    "W": 1,
+                    "L": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q1-tea",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "Glare suspiciously at the emissary, and maintain all caution on the journey. Trust no one",
+                "score": {
+                    "P": 1,
+                    "D": 1,
+                    "S": -1
+                }
+            },
+            {
+                "text":
+                    "Complain all the while about how they have inconvenienced you",
+                "score": {
+                    "L": -1,
+                    "A": -2,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Kick and Scream until they are forced to escort you themselves",
+                "score": {
+                    "A": -1,
+                    "E": 1,
+                    "W": -1,
+                    "Honor": -1
+                }
+            },
+            {
+                "text":
+                    "Accept the duty, and calmly embark once you have cleaned for tea",
+                "score": {
+                    "P": 1,
+                    "W": 1,
+                    "L": 1,
+                    "Honor": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q2",
+        "image": "images/questions/highway.jpg.webp",
+        "answers": [
+            {
+                "text":
+                    "Why yes! it could be quite the experience",
+                "score": {
+                    "E": 2,
+                    "S": 2,
+                    "A": 1,
+                    "W": 1
+                }
+            },
+            {
+                "text":
+                    "Not particularly, sir. I'd rather stay at home",
+                "score": {
+                    "A": 1,
+                    "P": 1,
+                    "E": -1,
+                    "H": -1
+                }
+            },
+            {
+                "text":
+                    "It depends, doesn't it, sir",
+                "score": {
+                    "A": 1,
+                    "W": 1,
+                    "S": 1,
+                    "H": -1
+                }
+            },
+            {
+                "text":
+                    "*Defiant silence*",
+                "score": {
+                    "A": -2,
+                    "H": 1,
+                    "W": -1,
+                    "E": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q3","image": "images/questions/bustling-medeival-street.jpg",
+
+        "answers": [
+            {
+                "text":
+                    "Amazed! So many people and so much going on",
+                "score": {
+                    "E": 1,
+                    "S": 2,
+                    "R": 1
+                }
+            },
+            {
+                "text":
+                    "Uneasy. I prefer the countryside",
+                "score": {
+                    "R": 2,
+                    "L": 1,
+                    "W": -1
+                }
+            },
+            {
+                "text":
+                    "Lost in thought. I am worried about what the king has summoned me for",
+                "score": {
+                    "D": 2,
+                    "W": -1,
+                    "S": -1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q4",
+        "text":
+            "You arrive at the kings palace. The emissary goes in and tells you to wait in the plaza, where you see two people coming from the univeristy nearby. ",
+        "image": "images/questions/medival-marketplace.jpg",
+
+        "answers": [
+            {
+                "text":
+                    "I suppose I agree with you. It is nice to have strong bonds, but I think the best thing for that is shared experience. "
+                    ,
+                "score": {
+                    "S": 4,
+                    "L": -1,
+                    "E": 1
+                },
+                "followUp": "q4-scholar"
+            },
+            {
+                "score": {
+                    "L": 4,
+                    "S": -1,
+                    "D": 1
+                },
+                "followUp": "q4-philosopher"
+            },
+            {
+                "score": {
+                    "H": 4,
+                    "W": 1,
+                    "P": 1
+                },
+                "followUp": "q4-tie"
+            },
+            {
+                "score": {
+                    "L": 1,
+                    "S": 1,
+                    "W": 1,
+                    "P": -1,
+                    "D": -1
+                },
+                "followUp": "q4-tie"
+            }
+        ]
+    },
+    {
+        "id": "q4-tie",
+        "image": "images/questions/Disputation.jpg",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "The Philosopher",
+                "score": {
+                    "P": 1,
+                    "D": 1,
+                    "L": 2
+                }
+            },
+            {
+                "text":
+                    "The Scholar",
+                "score": {
+                    "S": 2,
+                    "P": 1,
+                    "D": 1
+                }
+            },
+            {
+                "text":
+                    "Neither. Though you appreciate seeking the truth, neither of them are fully correct",
+                "score": {
+                    "P": 2,
+                    "W": 1
+                }
+            },
+            {
+                "score": {
+                    "P": -3,
+                    "D": -2
+                }
+            }
+        ]
+    },
+    {
+        "id": "q4-scholar",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "The Philosopher",
+                "score": {
+                    "P": 1,
+                    "D": 1,
+                    "L": 2
+                }
+            },
+            {
+                "text":
+                    "The Scholar",
+                "score": {
+                    "S": 2,
+                    "P": 1,
+                    "D": 1
+                }
+            },
+            {
+                "text":
+                    "Neither. Though you appreciate seeking the truth, neither of them are fully correct",
+                "score": {
+                    "P": 2,
+                    "W": 1
+                }
+            },
+            {
+                "score": {
+                    "P": -3,
+                    "D": -2
+                }
+            }
+        ]
+    },
+    {
+        "id": "q4-philosopher",
+
+        "type": "followup",
+
+        "category": "Follow-up",
+
+        "answers": [
+            {
+                "text":
+                    "The Philosopher",
+                "score": {
+                    "P": 1,
+                    "D": 1,
+                    "L": 2
+                }
+            },
+            {
+                "text":
+                    "The Scholar",
+                "score": {
+                    "S": 2,
+                    "P": 1,
+                    "D": 1
+                }
+            },
+            {
+                "text":
+                    "Neither. Though you appreciate seeking the truth, neither of them are fully correct",
+                "score": {
+                    "P": 2,
+                    "W": 1
+                }
+            },
+            {
+                "score": {
+                    "P": -3,
+                    "D": -2
+                }
+            }
+        ]
+    },
+    {
+        "id": "q5",
+        "answers": [
+            {
+                "text":
+                    "Yes, it is beautiful to behold",
+                "score": {
+                    "R": 4,
+                    "E": 3,
+                    "D": 1
+                }
+            },
+            {
+                "text":
+                    "Yes, I appreciate the technique and skill especially",
+                "score": {
+                    "R": 2,
+                    "H": 4,
+                    "P": 1
+                }
+            },
+            {
+                "text":
+                    "Yes, good art is rich with meaning",
+                "score": {
+                    "D": 1,
+                    "R": 2,
+                    "P": 4,
+                    "L": 1
+                }
+            },
+            {
+                "text":
+                    "Yes, it is culture and people are edified by it",
+                "score": {
+                    "E": 1,
+                    "H": 3,
+                    "S": 3,
+                    "P": 2,
+                    "A": 2
+                }
+            },
+            {
+                "text":
+                    "I am human, am I not? Yes I love art in so far as I love the artist and what they have revealed",
+                "score": {
+                    "D": 1,
+                    "L": 3,
+                    "R": 5,
+                    "P": 1
+                }
+            },
+            {
+                "text":
+                    "Well it depends - Sometimes I am not moved by it",
+                "score": {
+                    "D": -1,
+                    "R": -3,
+                    "L": -2,
+                    "S": 1,
+                    "P": 1
+                }
+            },
+            {
+                "text":
+                    "Eh..",
+                "score": {
+                    "A": -1,
+                    "R": -5,
+                    "W": -1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q6",
+        "text":
+            "Leaving the courtyard, you enter a large atrium with a high ceiling. You are led down many passageways until you reach the great doors of the throne room. You enter and pay due homage. The king is regally dressed in gilded silk robes - a little shorter than you expected. ",
+        "image": "throne1.webp",
+        "answers": [
+            {
+                
+                "score": {
+                    "A": 1,
+                    "W": -1
+                }
+            },
+            {
+                
+                "score": {
+                    "H": 1,
+                    "L": 1,
+                    "D": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "H": 1,
+                    "P": 1,
+                    "W": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "S": 1,
+                    "W": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "q7",
+        "text":
+            "After a restless night's sleep, you are led to the palace stables to begin the journey. On your way you meet a couple arriving to the palace. The officials all greet them with a bow",
+        "image":"images/questions/lord.png",
+        "answers": [
+            {
+                
+                "score": {
+                    "L": 1,
+                    "S": 4,
+                    "A": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "P": 3,
+                    "D": 1,
+                    "A": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "A": 4,
+                    "H": 1,
+                    "E": 1,
+                    "Chivalry": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "L": 4,
+                    "S": 1,
+                    "R": 1
+                }
+            },
+            {
+                
+                "score": {
+                    "L": -2,
+                    "P": -4
+                }
+            }
+        ]
+    },
+        {
+            "id": "q8",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 3, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": -1, "W": -1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 1, "R": 1, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": -1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q9",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": -2, "L": 0, "P": 0, "R": -1, "A": 0, "E": 1, "W": 0, "D": -1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": -1, "L": 0, "P": 0, "R": 1, "A": 0, "E": -1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 2, "L": 0, "P": 0, "R": -1, "A": 0, "E": 1, "W": 0, "D": -1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 7, "A": 0, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q10",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 1, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 3, "E": 2, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": -1, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 0, "A": 7, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q11",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 4, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q12",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 3, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 1, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 3, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q13",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 2, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": -1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 4, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": -2, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-deep",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-tale",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 7
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 4, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 0, "P": -1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": -2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-music",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 7
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 4, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 0, "P": -1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": -2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-politics",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 7
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 4, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 0, "P": -1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": -2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-ally",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 7
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 4, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 0, "P": -1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": -2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q14-sleep",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 7
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 4, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 0, "P": -1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": -2
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q15",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": -1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q16",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q17",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": -1, "D": 0, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q18",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q18-fix",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q18-sit",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q18-wander",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q19",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 2, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": -1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 2, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q20",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q21",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q21-tell",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 1, "P": 2, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 7, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q21-ask",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 1, "P": 2, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 7, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q21-nothing",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 1, "P": 2, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 7, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q22",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 2, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q23",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q24",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 2, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q25",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 2, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": -1, "Honor": -1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": -2, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 3, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q25-run",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q25-dodge",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q25-slash",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q26",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 7, "A": 0, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q27",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": -1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 7, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q28",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 1, "R": 1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 1, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q29",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 7, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q30",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": -1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q31",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q32",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q33",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 0, "A": 7, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q34",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q35",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q36",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q37",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": -1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 7, "R": 0, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q38",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 2, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 7, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q39",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 0, "R": 3, "A": 0, "E": 3, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 2, "A": 0, "E": 3, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 2, "E": 0, "W": 3, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q40",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 4, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": -1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 7, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q41",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 4, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 4, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q42",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 2, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 0, "R": 2, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 7, "R": 0, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q43",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q44-kingdom",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 2, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q44-sail",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 2, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q44-village",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 2, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q44-north",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 2, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q45",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 2, "P": 0, "R": 2, "A": 0, "E": 3, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": -1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 7, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q46",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": -1, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 3, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 3, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q47",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 4, "E": 1, "W": 1, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 4, "A": 0, "E": 0, "W": 1, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q47-poet",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q47-action",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q47-aha",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q48",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 2, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q49",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 2, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 0, "P": -1, "R": 2, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 1, "E": 0, "W": 1, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": -1, "S": 0, "L": -1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q49-idk",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 2, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q49-slayer",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 2, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q49-farmer",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 2, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q49-traveller",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 2, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q50",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 11, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 3, "S": 0, "L": 0, "P": 0, "R": 0, "A": 11, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 11, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q51",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 1, "A": 0, "E": 0, "W": 0, "D": 11, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 11, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 7, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 11, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q52",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 11, "W": -1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 11, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 11, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 7, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q53",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 11, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 11, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 11, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q54",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 11, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 11, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 11, "A": 0, "E": 10, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q55",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 5, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 7, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 7, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 7, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 7, "R": 0, "A": 0, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q56",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 11, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 11, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 11, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q57",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 11, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 11, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 11, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q58",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 1, "R": 0, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 3, "W": 5, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 9, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 1, "P": 0, "R": 1, "A": 1, "E": 1, "W": 1, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q59",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 1, "L": 2, "P": 1, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 5, "S": 0, "L": 5, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q60",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 2, "P": 2, "R": 2, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 11, "Chivalry": 3
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q61",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 5, "S": 11, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 5, "L": 11, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 11, "S": 0, "L": 5, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q62",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 4, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 6, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q63",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q64",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": -1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q64-yes",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 7, "R": 0, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q64-no",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 7, "R": 0, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q65",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 1, "E": 2, "W": 0, "D": 0, "Courage": 2, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 2, "D": 2, "Courage": 1, "Honor": 1, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": -1, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q66",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q67",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 7, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q68",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q69",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q70",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 0, "R": 0, "A": 7, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q71",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 4, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q72",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 2, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": -1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": -1, "R": -1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 7, "S": 0, "L": 0, "P": 7, "R": 0, "A": 0, "E": 0, "W": 0, "D": 7, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q73",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 2, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 2, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q74",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 2, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": -1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 7, "R": 0, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q75",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 0, "R": 0, "A": 7, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q76",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 7, "A": 0, "E": 7, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q77",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 7, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q78",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q79",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q80",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q81",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 7, "L": 0, "P": 7, "R": 0, "A": 0, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 3, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 3, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 2, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 2, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 2
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82-charge",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82-medic",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82-archer",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82-brother",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q82-watch",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 1, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q83",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 1
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q84",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 7, "P": 0, "R": 0, "A": 7, "E": 0, "W": 7, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q85",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 2, "R": 0, "A": 1, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 1, "R": 0, "A": 1, "E": 0, "W": 0, "D": 1, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q86",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 1, "R": 0, "A": 1, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 1, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 1, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q86-a",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q86-b",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q86-c",
+            
+            "type": "followup",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 1, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 2, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 2, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 1, "P": 1, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 1, "L": 0, "P": 0, "R": 0, "A": 1, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 1, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q87",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 3, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 2, "S": 0, "L": 0, "P": 0, "R": 0, "A": 2, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 3, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 3, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 3, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 1, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 2, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 3, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                },
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 3, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        },
+        {
+            "id": "q88",
+            
+            "answers": [
+                {
+                    
+                    "score": {
+                        "H": 0, "S": 0, "L": 0, "P": 0, "R": 0, "A": 0, "E": 0, "W": 0, "D": 0, "Courage": 0, "Honor": 0, "Chivalry": 0
+                    }
+                }
+            ]
+        }
+    ]

@@ -1,24 +1,49 @@
+/*
+    Cat Tot Max Avg
+0	H	257	180	50.10
+1	S	234	195	58.36
+2	L	201	173	48.17
+3	P	280	197	56.34
+4	R	221	182	52.40
+5	A	220	154	44.37
+6	E	231	166	45.91
+7	W	177	145	41.47
+8	D	200	146	42.38
+*/
+const MAXES = {"H": 180, "S": 195, "L": 173, "P": 191, "R": 182, "A": 154, "E": 166, "W": 145, "D": 146};
+
+
 /* =========================================================
    13. FIND STRONGEST SCORE
 ========================================================= */
 
 function getHighestScore(keys) {
 
+    percentages = {}
+
     let highestKey = keys[0];
 
+    if (keys == [
+            "E",
+            "W",
+            "D"
+        ]) {
+        percentages = state.scores
+    } else {
+        keys.forEach(key => {
+            percentages[key] = state.scores[key] / MAXES[key];
+        });
+    }
     keys.forEach(key => {
-
         if (
-            state.scores[key] >
-            state.scores[highestKey]
+            percentages[key] >
+            percentages[highestKey]
         ) {
             highestKey = key;
         }
-
     });
 
     return highestKey;
-
 }
 
 
@@ -230,7 +255,7 @@ function createScoreBars(
     /*
         Calculate maximum so the largest
         score fills the bar.
-    */
+    
 
     const maxScore =
         Math.max(
@@ -238,8 +263,8 @@ function createScoreBars(
                 key => state.scores[key]
             ),
             1
-        );
-
+        );      
+    */
 
     keys.forEach(key => {
 
@@ -267,8 +292,8 @@ function createScoreBars(
         const value =
             document.createElement("span");
 
-        value.textContent =
-            state.scores[key];
+        /*value.textContent =
+            state.scores[key];*/
 
 
         label.appendChild(name);
@@ -290,11 +315,14 @@ function createScoreBars(
 
 
         const width =
-            (state.scores[key] / maxScore) * 100;
+            ((state.scores[key] < 0 ? 0 : state.scores[key]) / (MAXES[key] - 21)) * 100;
 
 
         fill.style.width =
-            `${width}%`;
+            `${width > 100 ? 100 : width}%`;
+
+        value.textContent =
+            `${width > 100 ? 100 : width}%`;
 
 
         track.appendChild(fill);
@@ -433,10 +461,10 @@ function renderTraitResults() {
             state.scores[key] || 0;
 
         const maxScore =
-            maximums[key] || 1;
+            maximums[key] || 30;
         
         const minScore =
-            maximums[key] || 0;
+            minimums[key] || 0;
 
         let rawPercentage = Math.round(
                 100 * ((rawScore - minScore) / (maxScore - minScore))

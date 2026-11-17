@@ -1268,6 +1268,26 @@ body.test-mode .main-content {
     display: inline-flex;
 }
 
+.restore-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    padding: 10px 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.restore-button:hover {
+    background: rgba(255,255,255,0.1);
+}
 
 /* =========================================================
    TEST SCREEN
@@ -1543,6 +1563,7 @@ body.test-mode .main-content {
     line-height: 1.6;
     font-size: 1.2rem;
     font-weight: 600;
+    white-space: pre-line;
 }
 
 
@@ -1714,7 +1735,7 @@ body.test-mode .main-content {
 
     width: 100%;
 
-    max-height: 450px;
+    max-height: 650px;
 
     object-fit: cover;
 }
@@ -2240,6 +2261,10 @@ body.test-mode .main-content {
 
 .symbol-item {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.symbol-item p {
+    text-align: center;
 }
 
 .symbol-item[open] {

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3×3 System Organizer</title>
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --panel: #ffffff;
+    --border: #d7dce3;
+    --text: #17202a;
+    --muted: #68727d;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --set-header: #eef1f5;
+    --input-bg: #fff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .app {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0 0 6px;
+    font-size: 24px;
+  }
+
+  .subtitle {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .controls {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .matrix {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 120px));
+    gap: 8px;
+    width: max-content;
+  }
+
+  .matrix input {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--input-bg);
+  }
+
+  .matrix input:focus,
+  .title-input:focus,
+  .value-input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .hint {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 14px;
+    align-items: start;
+  }
+
+  .column {
+    min-width: 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .column-name {
+    width: 100%;
+    margin-bottom: 8px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0 9px;
+    font-weight: 600;
+  }
+
+  .set {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .set-title {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--set-header);
+    padding: 8px 10px;
+    font-weight: 700;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 8px;
+    align-items: center;
+    padding: 6px 8px;
+    border-bottom: 1px solid #edf0f3;
+  }
+
+  .row:last-child { border-bottom: 0; }
+
+  .key {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 5px;
+    padding: 6px 5px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .value-input {
+    width: 100%;
+    min-width: 0;
+    height: 31px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 4px 7px;
+    background: var(--input-bg);
+  }
+
+  .empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 20px 8px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 900px) {
+    body { padding: 12px; }
+    .columns { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>3×3 System Organizer</h1>
+  <p class="subtitle">
+    Enter one letter in each of the 9 boxes. The tool generates all 27 three-letter keys
+    (one letter from each row), grouped into 9 sets of 3. Values are synchronized across all three columns.
+  </p>
+
+  <section class="controls">
+    <div class="matrix" id="matrix"></div>
+    <div class="hint">
+      Example: A B C / D E F / G H I. Column 1 groups by the first two letters (ADG, ADH, ADI); Column 2 by the last two (ADG, BDG, CDG); Column 3 by the outside letters (ADG, AEH, AFI, etc.).
+      Duplicate letters are allowed.
+    </div>
+  </section>
+
+  <section class="columns" id="columns"></section>
+</div>
+
+<script>
+(() => {
+  const matrix = document.getElementById("matrix");
+  const columns = document.getElementById("columns");
+
+  // 9 editable key cells, arranged as 3 rows × 3 columns.
+  const letters = [
+    ["H","S","L"],
+    ["P","R","A"],
+    ["E","W","D"]
+  ];
+
+  // Shared values are indexed by the generated key.
+  const values = Object.create(null);
+  const titles = ["Set 1","Set 2","Set 3","Set 4","Set 5","Set 6","Set 7","Set 8","Set 9"];
+  const columnNames = ["Organization 1","Organization 2","Organization 3"];
+
+  function createMatrix() {
+    matrix.innerHTML = "";
+
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 3; c++) {
+        const input = document.createElement("input");
+        input.maxLength = 1;
+        input.value = letters[r][c];
+
+        input.addEventListener("input", () => {
+          letters[r][c] = input.value.slice(-1).toUpperCase();
+          input.value = letters[r][c];
+          renderColumns();
+        });
+
+        matrix.appendChild(input);
+      }
+    }
+  }
+
+  function allKeys() {
+    const keys = [];
+    for (let r1 = 0; r1 < 3; r1++) {
+      for (let r2 = 0; r2 < 3; r2++) {
+        for (let r3 = 0; r3 < 3; r3++) {
+          keys.push(
+            `${letters[0][r1] || "?"}${letters[1][r2] || "?"}${letters[2][r3] || "?"}`
+          );
+        }
+      }
+    }
+    return keys;
+  }
+
+  function generateSets(grouping) {
+    const keys = allKeys();
+    const sets = [];
+
+    // Each column uses a different pair of positions for its grouping:
+    // 1: first + second letters (AB, DE)
+    // 2: second + third letters (BC, EF)
+    // 3: outside letters: first + third (AC, DF)
+    const pair = {
+      firstTwo: [0, 1],
+      lastTwo: [1, 2],
+      outside: [0, 2]
+    }[grouping];
+
+    for (let a = 0; a < 3; a++) {
+      for (let b = 0; b < 3; b++) {
+        const set = keys.filter(key =>
+          key[pair[0]] === letters[pair[0]][a] &&
+          key[pair[1]] === letters[pair[1]][b]
+        );
+        sets.push(set);
+      }
+    }
+
+    return sets;
+  }
+
+  function makeValueInput(key) {
+    const input = document.createElement("input");
+    input.className = "value-input";
+    input.type = "text";
+    input.placeholder = "Value";
+    input.value = values[key] ?? "";
+
+    input.addEventListener("input", () => {
+      values[key] = input.value;
+
+      // Update every visible input for this key, including the other columns.
+      document.querySelectorAll(`[data-key="${CSS.escape(key)}"]`)
+        .forEach(el => {
+          if (el !== input) el.value = input.value;
+        });
+    });
+
+    input.dataset.key = key;
+    return input;
+  }
+
+  function renderColumns() {
+    columns.innerHTML = "";
+
+    const groupings = ["firstTwo", "lastTwo", "outside"];
+
+    for (let col = 0; col < 3; col++) {
+      const sets = generateSets(groupings[col]);
+      const column = document.createElement("div");
+      column.className = "column";
+
+      const columnName = document.createElement("input");
+      columnName.className = "column-name";
+      columnName.value = columnNames[col];
+      columnName.placeholder = "Column title";
+      columnName.addEventListener("input", () => {
+        columnNames[col] = columnName.value;
+      });
+      column.appendChild(columnName);
+
+      sets.forEach((keys, setIndex) => {
+        const set = document.createElement("div");
+        set.className = "set";
+
+        const title = document.createElement("input");
+        title.className = "set-title";
+        title.value = titles[setIndex];
+        title.placeholder = `Set ${setIndex + 1} title`;
+        title.dataset.titleSet = setIndex;
+        set.appendChild(title);
+
+        keys.forEach(key => {
+          const row = document.createElement("div");
+          row.className = "row";
+
+          const keyLabel = document.createElement("div");
+          keyLabel.className = "key";
+          keyLabel.textContent = key;
+
+          row.appendChild(keyLabel);
+          row.appendChild(makeValueInput(key));
+          set.appendChild(row);
+        });
+
+        column.appendChild(set);
+      });
+
+      columns.appendChild(column);
+    }
+  }
+
+  createMatrix();
+  renderColumns();
+})();
+</script>
+</body>
+</html>

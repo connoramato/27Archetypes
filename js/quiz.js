@@ -24,7 +24,7 @@ function startTest() {
 
     initializeScores();
 
-    state.currentQuestionIndex = 0;
+    state.currentQuestionIndex = 1;
 
     state.questionQueue = [questions[0]]
 
@@ -80,10 +80,10 @@ function renderQuestion() {
         return;
     }
 
-    const displayNumber = state.questionQueue.length;
+    const displayNumber = state.questionQueue.length + 1;
 
     questionCounter.textContent =
-        `Question ${displayNumber} of ${state.total}`;
+        `Question ${displayNumber} of 100`;
 
 
     const percent =
@@ -134,20 +134,20 @@ function renderQuestion() {
         button.textContent = question.answers[0].text;
         button.addEventListener(
             "click",
-            () => initQuestions(man_woman = "man",
-                                pronoun = "he",
-                                possesive = "his",
-                                object_noun = "him")
+            () => initQuestions(restored = false,
+                                man_woman = "man",
+                                sibling = "brother",
+                                child = "son")
         );
         const button2 = document.createElement("button");
         button2.className = "answer-button";
         button2.textContent = question.answers[1].text;
         button2.addEventListener(
             "click",
-            () => initQuestions(man_woman = "woman",
-                                pronoun = "she",
-                                possesive = "hers",
-                                object_noun = "her")
+            () => initQuestions(restored = false, 
+                                man_woman = "woman",
+                                sibling = "sister",
+                                child = "daughter")
         );
         answersContainer.appendChild(button);
         answersContainer.appendChild(button2);
@@ -179,7 +179,7 @@ function renderQuestion() {
     }
 
     backButton.disabled =
-        state.currentQuestionIndex === 0;
+        state.questionQueue.length <= 1;
 
     /* Re-trigger animation */
 
@@ -200,7 +200,18 @@ function renderQuestion() {
    10. SELECT ANSWER
 ========================================================= */
 
-function selectAnswer(
+function saveDictionary(key, dict) {
+  try {
+    const serialized = JSON.stringify(dict);
+    localStorage.setItem(key, serialized);
+    return true;
+  } catch (error) {
+    console.error("Failed to save dictionary to localStorage:", error);
+    return false;
+  }
+}
+
+/*function selectAnswer(
     answer,
     answerIndex
 ) {
@@ -216,13 +227,20 @@ function selectAnswer(
 
     if (answer.followUp) {
         state.total++;
-        while (questions[state.currentQuestionIndex++].id != answer.followUp);
-        state.questionQueue.push(questions[state.currentQuestionIndex-1]);
-    } else {
-        while (questions[state.currentQuestionIndex++].type == "followup");
+        while (questions[state.currentQuestionIndex].id != answer.followUp) {
+            state.currentQuestionIndex++;
+        }
         state.questionQueue.push(questions[state.currentQuestionIndex]);
+        state.currentQuestionIndex++;
+    } else {
+        while (questions[state.currentQuestionIndex].type == "followup") {
+            state.currentQuestionIndex++;
+        }
+        state.questionQueue.push(questions[state.currentQuestionIndex]);
+        state.currentQuestionIndex++;
     }
 
+    saveDictionary("progress",state)
 
     setTimeout(() => {
 
@@ -230,7 +248,106 @@ function selectAnswer(
 
     }, 120);
 
+}*/
+
+function selectAnswer(answer, answerIndex) {
+
+    const question =
+        state.questionQueue[state.questionQueue.length - 1];
+
+    // Save the index before processing the answer.
+    const previousIndex = state.currentQuestionIndex;
+
+    state.answerHistory[question.id] = {
+        answerIndex: answerIndex,
+        answer: answer,
+        previousIndex: previousIndex
+    };
+
+    applyScore(answer, +1);
+
+    // Find the end of the consecutive followup block.
+    let blockEnd = previousIndex;
+
+    while (
+        blockEnd < questions.length &&
+        questions[blockEnd].type === "followup"
+    ) {
+        blockEnd++;
+    }
+
+    // CASE 1: The answer selects a followup.
+    if (answer.followUp) {
+
+        // Search ONLY within this parent's followup block.
+        let followUpIndex = -1;
+
+        for (let i = previousIndex; i < blockEnd; i++) {
+
+            if (questions[i].id === answer.followUp) {
+                followUpIndex = i;
+                break;
+            }
+
+        }
+
+        if (followUpIndex === -1) {
+
+            console.error(
+                "Followup not found in expected block:",
+                answer.followUp,
+                question.id
+            );
+
+            applyScore(answer, -1);
+            delete state.answerHistory[question.id];
+
+            return;
+        }
+
+        // Count the selected followup.
+        state.total++;
+
+        // Add the selected followup to the queue.
+        state.questionQueue.push(questions[followUpIndex]);
+
+        // Skip the REST of the followup block.
+        state.currentQuestionIndex = blockEnd;
+
+    }
+
+    // CASE 2: No followup selected.
+    else {
+
+        // Skip the entire followup block.
+        const nextIndex = blockEnd;
+
+        if (nextIndex >= questions.length) {
+
+            state.currentQuestionIndex = nextIndex;
+
+            saveDictionary("progress", state);
+
+            setTimeout(() => finishTest(), 120);
+
+            return;
+        }
+
+        // Add the next regular question.
+        state.questionQueue.push(questions[nextIndex]);
+
+        state.currentQuestionIndex = nextIndex + 1;
+
+    }
+
+    saveDictionary("progress", state);
+
+    setTimeout(() => {
+        renderQuestion();
+    }, 120);
+
 }
+
 
 /* =========================================================
    10b. BACK BUTTON
@@ -266,39 +383,125 @@ function applyScore(
 
 }
 
-function goBack() {
+/*function goBack() {
 
-    if (state.currentQuestionIndex <= 0) {
+    if (state.questionQueue.length <= 1) {
         return;
     }
 
-    const question = state.questionQueue.pop(); //remove!
+    // Remove the currently displayed question.
+    const removedQuestion = state.questionQueue.pop();
 
-    const prevID = state.questionQueue[state.questionQueue.length - 1].id; 
-    while (questions[--state.currentQuestionIndex].id != prevID); //rewind index
+    // The previous question is now active again.
+    const previousQuestion =
+        state.questionQueue[state.questionQueue.length - 1];
 
+    // Retrieve the answer that led away from that question.
     const history =
-        state.answerHistory[
-            question.id
-        ];
+        state.answerHistory[previousQuestion.id];
 
-    if (question.type == "followup") state.total--;
+    if (history) {
 
-    if (!history) {
-        renderQuestion();
-        return;
+        // Reverse its score.
+        applyScore(history.answer, -1);
+
+        // Restore the index from before that answer.
+        state.currentQuestionIndex = history.previousIndex;
+
+        // Remove the old answer.
+        delete state.answerHistory[previousQuestion.id];
+
     }
 
-    applyScore(
-        history.answer,
-        -1
-    ); // Reverse the score from the answer.
+    // If the removed question was a followup,
+    // remove it from the total question count.
+    if (removedQuestion.type === "followup") {
+        state.total--;
+    }
 
-    delete state.answerHistory[
-        question.id
-    ];
+    saveDictionary("progress", state);
 
     renderQuestion();
+
+}*/
+
+function goBack() {
+
+    if (state.questionQueue.length <= 1) {
+        return;
+    }
+
+    // Remove current question.
+    const removedQuestion = state.questionQueue.pop();
+
+    // Get the previous question.
+    const previousQuestion =
+        state.questionQueue[state.questionQueue.length - 1];
+
+    // Retrieve the answer that led away from it.
+    const history =
+        state.answerHistory[previousQuestion.id];
+
+    if (history) {
+
+        // Reverse the previous answer's scores.
+        applyScore(history.answer, -1);
+
+        // Restore the exact original index.
+        state.currentQuestionIndex = history.previousIndex;
+
+        // Remove its answer history.
+        delete state.answerHistory[previousQuestion.id];
+
+    }
+
+    // Remove followup from the total if necessary.
+    if (removedQuestion.type === "followup") {
+        state.total--;
+    }
+
+    saveDictionary("progress", state);
+
+    renderQuestion();
+
+}
+
+
+function restoreSession() {
+
+    try {
+
+        const savedProgress = localStorage.getItem("progress");
+
+        if (!savedProgress) {
+            return;
+        }
+
+        const savedState = JSON.parse(savedProgress);
+
+        // Restore all saved state properties
+        Object.assign(state, savedState);
+
+        // Make sure the quiz is marked as active
+        state.testStarted = true;
+
+        // Restore the quiz interface
+        setSidebarTestMode(true);
+
+        showScreen(testScreen);
+
+        initQuestions(restored=true);
+
+        renderQuestion();
+
+    } catch (error) {
+
+        console.error("Failed to restore quiz session:", error);
+
+        alert("Could not restore your previous session.");
+
+    }
+
 }
 
 

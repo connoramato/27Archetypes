@@ -48,6 +48,39 @@ let state = {
 
 };
 
+function checkSavedSession() {
+
+    const restoreButton = document.getElementById("restoreButton");
+
+    const savedProgress = localStorage.getItem("progress");
+
+    if (!savedProgress) {
+        restoreButton.style.display = "none";
+        return;
+    }
+
+    try {
+
+        const savedState = JSON.parse(savedProgress);
+
+        if (
+            savedState.testStarted &&
+            savedState.questionQueue &&
+            savedState.questionQueue.length > 0
+        ) {
+            restoreButton.style.display = "block";
+        } else {
+            restoreButton.style.display = "none";
+        }
+
+    } catch (error) {
+
+        restoreButton.style.display = "none";
+
+    }
+
+}
+document.addEventListener("DOMContentLoaded", checkSavedSession);
 
 /* =========================================================
    5. DOM REFERENCES
