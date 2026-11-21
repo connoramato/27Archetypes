@@ -355,7 +355,7 @@ function initQuestions(
         text:
             `You arrive at the kings palace. The emissary goes in and tells you to wait in the plaza, where you see two people coming from the univeristy nearby. ` 
              + ` You gather from their conversation that one is a scholar and the other a philosopher. When they notice you, the scholar desperately seeks another opinion: `
-             + `"Excuse me, you there! You must help us settle this debate. I say that, given humans are inherently relational, the end of such sociability is comradery and mutual support. `
+             + `\r\n"Excuse me, you there! You must help us settle this debate. I say that, given humans are inherently relational, the end of such sociability is comradery and mutual support. `
              + `My friend here disagrees, he says most social bonds are meaningless when compared to the knowledge shared only with those closest to us. What is your thought?"`,
         image: `images/questions/medieval-marketplace.jpg`,
 
@@ -410,9 +410,9 @@ function initQuestions(
     {
         id: `q4-tie`,
         text:
-            `They stand amazed. The scholar says "We are quite surprised by your words! I really just wanted the opinion of a commoner, but you have given us the answer of a learned ${man_woman}, though it doesn't help us settle our debate."`
+            `They stand amazed. The scholar says \r\n"We are quite surprised by your words! I really just wanted the opinion of a commoner, but you have given us the answer of a learned ${man_woman}, though it doesn't help us settle our debate."\r\n`
             + ` The philosopher interjects "Indeed, there are many ponderous things in this city. In this world! Of course, the best way to seek truth is to ponder." The scholar quickly replies`
-            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!" The philosopher says "Why don't we turn this debate as well to this learned stranger?"`
+            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!" The philosopher says "Why don't we turn this debate as well to this learned stranger?"\r\n`
             + ` Who do you agree more with?`,
         image: `images/questions/Disputation.jpg`,
 
@@ -460,9 +460,9 @@ function initQuestions(
     {
         id: `q4-scholar`,
         text:
-            `The philosopher frowns. The scholar cheers "Ah, Victory! Though I must say we are quite surprised by your words! Though I really just wanted the opinion of a commoner, you have given us the answer of a learned ${man_woman}."`
+            `The philosopher frowns. The scholar cheers \r\n"Ah, Victory! Though I must say we are quite surprised by your words! Though I really just wanted the opinion of a commoner, you have given us the answer of a learned ${man_woman}."\r\n`
             + ` The philosopher interjects "Indeed, there are many ponderous things in this city. In this world! Of course, the best way to seek truth is to ponder." The scholar quickly replies`
-            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!" The philosopher says "Why don't we turn this debate as well to this learned stranger?"`
+            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!"\r\nThe philosopher says "Why don't we turn this debate as well to this learned stranger?"\r\n`
             + ` Who do you agree more with?`,
         image: `images/questions/Disputation.jpg`,
 
@@ -510,9 +510,9 @@ function initQuestions(
     {
         id: `q4-philosopher`,
         text:
-            `The philosopher victoriously smirks as his companion "The truth will out, as they say". The scholar says "Alas! Though truly, we are quite surprised by your words! I really just wanted the opinion of a commoner, but you have given us the answer of a learned ${man_woman}."`
-            + ` The philosopher interjects "Indeed, there are many ponderous things in this city. In this world! Of course, the best way to seek truth is to ponder." The scholar quickly replies`
-            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!" The philosopher says "Why don't we turn this debate as well to this learned stranger?"`
+            `The philosopher victoriously smirks as his companion \r\n"The truth will out, as they say"\r\nThe scholar says "Alas! Though truly, we are quite surprised by your words! I really just wanted the opinion of a commoner, but you have given us the answer of a learned ${man_woman}."\r\n`
+            + ` The philosopher interjects "Indeed, there are many ponderous things in this city. In this world! Of course, the best way to seek truth is to ponder."\r\nThe scholar quickly replies`
+            + ` "Fool, the truth is not something that can be acheived in our minds alone! We must interact with the world to learn. We must study!"\r\nThe philosopher says "Why don't we turn this debate as well to this learned stranger?"\r\n`
             + ` Who do you agree more with?`,
         image: `images/questions/Disputation.jpg`,
 
@@ -561,7 +561,7 @@ function initQuestions(
         id: `q5`,
         text:
             `At that moment, the courtyard gate opens, and an official appears. You say goodbye to your new friends and follow him into the palace. As you walk through the courtyard, you begin eyeing an aged artist atop some scaffolding, sculpting the ornate edifice. `
-            + `"Beauty is in the details, youngling" he says, noticing your curiosity, "Are you a lover of art?"`,
+            + `\r\n"Beauty is in the details, youngling" he says, noticing your curiosity, "Are you a lover of art?"`,
         image: "images/questions/edifice.jpg",
         answers: [
             {
@@ -639,19 +639,19 @@ function initQuestions(
         id: "q6",
         text:
             `Leaving the courtyard, you enter a large atrium with a high ceiling. You are led down many passageways until you reach the great doors of the throne room. You enter and pay due homage. The king is regally dressed in gilded silk robes - a little shorter than you expected. `
-            + `"Rise ${man_woman}" the king says jovially, "You are welcome! I hope our officials have treated you well." You reply cordially.\r\n`
+            + `\r\n"Rise ${man_woman}" the king says jovially, "You are welcome! I hope our officials have treated you well."\r\nYou reply cordially.\r\n`
             + `"Well now, let's not daddle; let's get straight to the point. You may be amazed to hear this, but we are in need of your help. `
             + `You see, it has come to my attention that you are related to the brigand known as The Rogue. It has been reported that he has been seen visiting your cottage on a number of occasians. `
-            + `It is also claimed that if that dirty outlaw trusts anyone, it's you."\r\n Though you haven't seen your brother in a year, you have, of course, also heard (though whether you believe is another story) that your brother makes (or takes, more like) a fortune as a highwayman. `
+            + `It is also claimed that if that dirty outlaw trusts anyone, it's you."\r\nThough you haven't seen your brother in a year, you have, of course, also heard (though whether you believe is another story) that your brother makes (or takes, more like) a fortune as a highwayman. `
             + `It is also true that before he dissapeared, he came by the cottage with strangely valuable gifts (making said rumors easier to believe). It is thirdly true that his whereabout were hardly known and life shrouded in mystery. `
             + `He isn't even your brother by blood. He was taken in, orphaned as he was, by your family when he was a boy. He has always felt like a real brother, since you were so young at the time. `
             + `Yes, he was distant at times and a whole lot of trouble on your mother, but he was a good brother... until he left one day, a man, sparsley returning home...\r\n`
-            + `"All that so say" you are drawn back from your thoughts just in time to hear the king's conclusion "We are laying a trap for The Rogue, and you are going to lead him into it" `
-            + `You stomach drops. You hope it didn't show on your face. "You will travel with a band of my best knights to his hideout. You will go in, and you must come out with him, alone, at any cost. `
+            + `"All that so say"\r\nyou are drawn back from your thoughts just in time to hear the king's conclusion:\r\n"We are laying a trap for The Rogue, and you are going to lead him into it"\r\n`
+            + `You stomach drops. You hope it didn't show on your face.\r\n"You will travel with a band of my best knights to his hideout. You will go in, and you must come out with him, alone, at any cost. `
             + `You see, it seems he is under the protection of a group of armed rebels in the north... the cost of sending an army all the way there is too steep for our coffers, young ${man_woman}. `
             + `Still, we need this problem gone. It is best if we can send a small party that can draw him out alone, finish the deal, and make their escape"\r\n`
-            + `Before you can think of a way out of this, or even utter 'your grace', the king quickly sends you on your way. `
-            + `"Our official will equip you for the journey. We thank you again, loyal subject, for your help in this most urgent matter" You are led away from the throne and out of the room. `
+            + `Before you can think of a way out of this, or even utter 'your grace', the king quickly sends you on your way.\r\n`
+            + `"Our official will equip you for the journey. We thank you again, loyal subject, for your help in this most urgent matter"\r\nYou are led away from the throne and out of the room. `
             + `As the door closes, you glimpse the king staring inquisitively at you. You are left standing at a great dark oak door thinking of how you might save your brother's life and, just as imperatively, save your own`,
         image: "images/questions/throne1.webp",
         answers: [
@@ -695,12 +695,12 @@ function initQuestions(
         id: "q7",
         text:
             `After a restless night's sleep, you are led to the palace stables to begin the journey. On your way you meet a couple arriving to the palace. The officials all greet them with a bow`
-            + ` The gentleman greets you ponderously, then addresses the servants. "Go, prepare the wain. I'll have a word with this one" He turns to you. `
-            + `"Good morrow, I expect your the one their sending up north?" You reply the affirmative. "Ah" He gives a look of pity. "I am sorry, you must feel great fear at what you have been compelled to do. However, I may have some helpful advice for you" `
-            + `His lady chimes in "Oh, and it would be prudent to keep this information close to your chest" imploring caution with her eyes. The gentleman looks down the hall before continuing `
-            + `"Not everyone in this land is loyal to the king. The rebels the king speaks of are more widespread than he cares to admit or wants to believe. As for ourselves, we think war is on our doorsteps" `
-            + `The lady picks up the point "Fear not, young traveller. Though what lies in store will be difficult, you do not know when a friend may be around the corner." The gentleman adds `
-            + `"Be on the look out for the right oppurunity. As for what we will do... we'll try our best here with the king in his court. We are not afraid of a little politicking. Be well."`
+            + ` The gentleman greets you ponderously, then addresses the servants. "Go, prepare the wain. I'll have a word with this one"\r\nHe turns to you. `
+            + `"Good morrow, I expect your the one their sending up north?"\r\nYou reply the affirmative.\r\n"Ah" He gives a look of pity. "I am sorry, you must feel great fear at what you have been compelled to do. However, I may have some helpful advice for you"\r\n`
+            + `His lady chimes in "Oh, and it would be prudent to keep this information close to your chest" imploring caution with her eyes.\r\nThe gentleman looks down the hall before continuing `
+            + `"Not everyone in this land is loyal to the king. The rebels the king speaks of are more widespread than he cares to admit or wants to believe. As for ourselves, we think war is on our doorsteps"\r\n`
+            + `The lady picks up the point "Fear not, young traveller. Though what lies in store will be difficult, you do not know when a friend may be around the corner."\r\nThe gentleman adds `
+            + `"Be on the look out for the right oppurunity. As for what we will do... we'll try our best here with the king in his court. We are not afraid of a little politicking. Be well."\r\n`
             + `The lady sends you on your way "Fare thee well!"`,
         image:"images/questions/lord.png",
         answers: [
@@ -3821,7 +3821,7 @@ function initQuestions(
         },
         {
             id: "q71",
-            text: "You approach a lone mountain in the eastern wastes. Atop one of the foothills is a gothic stone manor with a single tall parapet. As you approach, dark clouds roll over, the manor begins to take on a terrifying look. Lightning strikes in the distance, and you hurry to your destination before the storm comes. The poet raps the doorknocker on the cumbersome wooden doors. You are let in, and climb many stairs to reach the top floor of the tower. Inside, you face the back of a man looking through a thin window. There is another man sitting at a desk intent on his work. There is an intricate contraption of vials and tubes on the desk, and he is adding drops of a black liquid to an amber mixture. Your brother greets the man at the window and introduces him as the \r\n“wisest man he knows”. You ask who the man at the desk is and the sage responds \r\n“That is my friend, the alchemist, currently lost in foolish pursuits”\r\nSuddenly the man at the desk is aware of everyone, and responds\r\n“It is not foolish, the secrets of this world are meant to be unlocked”\r\nThe sage retorts \r\n“seeking knowledge for knowledge sake is unwise”\r\nThe alchemist has a comeback \r\n“eloquent words are apt to deceive. Wisdom is nothing if not applied”\r\nWho do you agree with?",
+            text: "You approach a lone mountain in the eastern wastes. Atop one of the foothills is a gothic stone manor with a single tall parapet. As you approach, dark clouds roll over, the manor begins to take on a terrifying look. Lightning strikes in the distance, and you hurry to your destination before the storm comes. The poet raps the doorknocker on the cumbersome wooden doors. You are let in, and climb many stairs to reach the top floor of the tower. Inside, you face the back of a man looking through a thin window. There is another man sitting at a desk intent on his work. There is an intricate contraption of vials and tubes on the desk, and he is adding drops of a black liquid to an amber mixture. Your brother greets the man at the window and introduces him as the “wisest man he knows”. You ask who the man at the desk is and the sage responds \r\n“That is my friend, the alchemist, currently lost in foolish pursuits”\r\nSuddenly the man at the desk is aware of everyone, and responds\r\n“It is not foolish, the secrets of this world are meant to be unlocked”\r\nThe sage retorts \r\n“seeking knowledge for knowledge sake is unwise”\r\nThe alchemist has a comeback \r\n“eloquent words are apt to deceive. Wisdom is nothing if not applied”\r\nWho do you agree with?",
             image: 'images/questions/stormcastle.jpg',
             answers: [
                 {
